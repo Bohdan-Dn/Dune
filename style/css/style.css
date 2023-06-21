@@ -349,7 +349,7 @@ h6 {
 .home {
   position: relative;
   height: 100vh;
-  background-image: url("/images/dune_1.webp");
+  background-image: url("/images/duneHome.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -499,7 +499,7 @@ h6 {
   z-index: 0;
   width: 100%;
   height: 100%;
-  background-image: url(/images/dune_bg1.jpg);
+  background-image: url("/images/duneParties.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -666,7 +666,7 @@ h6 {
 }
 
 .rules {
-  background-image: url(/images/rules_bg-1.webp);
+  background-image: url("/images/rulesBg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
