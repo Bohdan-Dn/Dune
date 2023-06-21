@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style/css/style.css">
+    <link rel="icon" href="/images/dune_head.webp">
+    <title>Dune tournament</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__navbar" id="navbar">
+            <div class="header__home"><a class="header__link-home" href="#home">Home</a></div>
+            <ul class="header__links">
+                <li class="header__season"><a class="header__link-season" href="#season">Season</a></li>
+                <li class="header__parties"><a class="header__link-parties" href="#parties">Game parties</a>
+                </li>
+                <li class="header__factions"><a class="header__link-factions" href="#factions">Factions</a></li>
+                <li class="header__rules"><a class="header__link-rules" href="#rules">Rules</a></li>
+                <li class="header__contacts"><a class="header__link-contacts" href="#contacts">Contacts</a></li>
+            </ul>
+            <div class="header__toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="header__dropdown-menu">
+                <li class="header__season"><a class="header__link-season" href="#season">Season</a></li>
+                <li class="header__parties"><a class="header__link-parties" href="#parties">Game parties</a>
+                </li>
+                <li class="header__factions"><a class="header__link-factions" href="#factions">Factions</a></li>
+                <li class="header__rules"><a class="header__link-rules" href="#rules">Rules</a></li>
+                <li class="header__contacts"><a class="header__link-contacts" href="#contacts">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="home" id="home">
+            <div class="home__container" id="home">
+                <img src="/images/dune_logo6.png" alt="dune">
+                <h1 class="home__title">Board game takes over 'White Rabbit' club...
+                    Immerse yourself in an epic
+                    sci-fi battle!</h1>
+            </div>
+        </section>
+        <section class="rating" id="season">
+            <div class="rating__container">
+                <div class="rating__header">
+                    <h3 class="rating__title title">The first dune season</h3>
+                    <h4 class="rating__subtitle">May 01, 2023 to august 31, 2023: a season of excitement and
+                        adventures!
+                    </h4>
+                </div>
+                <table class="rating__table table">
+                    <thead class="rating__thead thead">
+                        <tr>
+                            <th data-sort onclick="sortTable(0, this)">Players</th>
+                            <th data-sort onclick="sortTable(1, this)">Games</th>
+                            <th data-sort onclick="sortTable(2, this)">Victories</th>
+                            <th data-sort onclick="sortTable(3, this)">Total points</th>
+                            <th data-sort onclick="sortTable(4, this)">Average points</th>
+                        </tr>
+                    </thead>
+                    <tbody class="rating__tbody tbody" id="playerData">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="parties" id="parties">
+            <div class="parties__container">
+                <h3 class="parties__title title">Game parties</h3>
+                <div class="parties__sliger-bg"></div>
+                <div class="parties__slider swiper">
+                    <div class="parties__slider-container swiper">
+
+                        <div class="parties__slider-wrapper swiper-wrapper">
+                            <div class="parties__slide swiper-slide">
+                                <h5 class="parties__table-title">
+                                    <span class="parties__table-title-game"><strong>Game: </strong>10</span>
+                                    <span class="parties__table-title-date"><strong>Date: </strong>18.06.23</span>
+                                </h5>
+                                <table class="parties__table">
+                                    <tr>
+                                        <th><strong>Name</strong></th>
+                                        <th>Faction</th>
+                                        <th>Points</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ivan</strong></td>
+                                        <td>Harkonnen</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Bohdan</strong></td>
+                                        <td>Emperor</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Igor</strong></td>
+                                        <td>Atreides</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Oleg Old</strong></td>
+                                        <td>Guild</td>
+                                        <td>0.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Nazar</strong></td>
+                                        <td>Ixian</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Mr Yuri</strong></td>
+                                        <td>Bene Gesserit</td>
+                                        <td>0.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="parties__table-description" colspan="3">
+                                            <strong>Description:</strong>
+                                            Victory by
+                                            Guild ability.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="parties__slide swiper-slide">
+                                <h5 class="parties__table-title">
+                                    <span class="parties__table-title-game"><strong>Game: </strong>9</span>
+                                    <span class="parties__table-title-date"><strong>Date: </strong>14.06.23</span>
+                                </h5>
+                                <table class="parties__table">
+                                    <tr>
+                                        <th><strong>Name</strong></th>
+                                        <th>Faction</th>
+                                        <th>Points</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Maxim</strong></td>
+                                        <td>Guild</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Bohdan</strong></td>
+                                        <td>Atreides</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Igor</strong></td>
+                                        <td>Bene Gesserit</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Oleg Old</strong></td>
+                                        <td>Harkonnen</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Nazar</strong></td>
+                                        <td>Fremen</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Mr Yuri</strong></td>
+                                        <td>Emperor</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="parties__table-description" colspan="3">
+                                            <strong>Description:</strong>
+                                            Victory of the alliance in round 2.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="parties__slide swiper-slide">
+                                <h5 class="parties__table-title">
+                                    <span class="parties__table-title-game"><strong>Game: </strong>8</span>
+                                    <span class="parties__table-title-date"><strong>Date: </strong>10.06.23</span>
+                                </h5>
+                                <table class="parties__table">
+                                    <tr>
+                                        <th><strong>Name</strong></th>
+                                        <th>Faction</th>
+                                        <th>Points</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Maxim</strong></td>
+                                        <td>Ixian</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ivan</strong></td>
+                                        <td>Richese</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ihor</strong></td>
+                                        <td>Guild</td>
+                                        <td>0.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Oleg Old</strong></td>
+                                        <td>Bene Gesserit</td>
+                                        <td>0.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Nazar</strong></td>
+                                        <td>Emperor</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Mr Yuri</strong></td>
+                                        <td>Harkonnen</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="parties__table-description" colspan="3">
+                                            <strong>Description:</strong>
+                                            Victory by
+                                            Guild ability.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="parties__slide swiper-slide">
+                                <h5 class="parties__table-title">
+                                    <span class="parties__table-title-game"><strong>Game: </strong>7</span>
+                                    <span class="parties__table-title-date"><strong>Date: </strong>08.06.23</span>
+                                </h5>
+                                <table class="parties__table">
+                                    <tr>
+                                        <th><strong>Name</strong></th>
+                                        <th>Faction</th>
+                                        <th>Points</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Maxim</strong></td>
+                                        <td>Fremen</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Bohdan</strong></td>
+                                        <td>Bene Gesserit</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ihor</strong></td>
+                                        <td>Choam</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Oleg Old</strong></td>
+                                        <td>Guild</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Nazar</strong></td>
+                                        <td>Harkonnen</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Mr Yuri</strong></td>
+                                        <td>Atreides</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="parties__table-description" colspan="3">
+                                            <strong>Description:</strong>
+                                            Victory of the alliance in round 7.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="parties__slide swiper-slide">
+                                <h5 class="parties__table-title">
+                                    <span class="parties__table-title-game"><strong>Game: </strong>6</span>
+                                    <span class="parties__table-title-date"><strong>Date: </strong>03.06.23</span>
+                                </h5>
+                                <table class="parties__table">
+                                    <tr>
+                                        <th><strong>Name</strong></th>
+                                        <th>Faction</th>
+                                        <th>Points</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Maxim</strong></td>
+                                        <td>Bene Gesserit</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Bohdan</strong></td>
+                                        <td>Emperor</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ihor</strong></td>
+                                        <td>Harkonnen</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ivan</strong></td>
+                                        <td>Fremen</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Nazar</strong></td>
+                                        <td>Ixian</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Denis Young</strong></td>
+                                        <td>Guild</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="parties__table-description" colspan="3">
+                                            <strong>Description:</strong>
+                                            Victory of the alliance in round 7.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="parties__slide swiper-slide">
+                                <h5 class="parties__table-title">
+                                    <span class="parties__table-title-game"><strong>Game: </strong>5</span>
+                                    <span class="parties__table-title-date"><strong>Date: </strong>21.05.23</span>
+                                </h5>
+                                <table class="parties__table">
+                                    <tr>
+                                        <th><strong>Name</strong></th>
+                                        <th>Faction</th>
+                                        <th>Points</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Mr Yuri</strong></td>
+                                        <td>Fremen</td>
+                                        <td>0.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Bohdan</strong></td>
+                                        <td>Ixian</td>
+                                        <td>0.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ivan</strong></td>
+                                        <td>Emperor</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Maxim</strong></td>
+                                        <td>Harkonnen</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Igor</strong></td>
+                                        <td>Tleilaxu</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Denis Young</strong></td>
+                                        <td>Bene Gesserit</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="parties__table-description" colspan="3">
+                                            <strong>Description:</strong>
+                                            Victory by
+                                            Fremen ability in 10 round (game without Guild).
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="parties__slide swiper-slide">
+                                <h5 class="parties__table-title">
+                                    <span class="parties__table-title-game"><strong>Game: </strong>4</span>
+                                    <span class="parties__table-title-date"><strong>Date: </strong>16.05.23</span>
+                                </h5>
+                                <table class="parties__table">
+                                    <tr>
+                                        <th><strong>Name</strong></th>
+                                        <th>Faction</th>
+                                        <th>Points</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Nazar</strong></td>
+                                        <td>Emperor</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Bohdan</strong></td>
+                                        <td>Choam</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Oleg Old</strong></td>
+                                        <td>Fremen</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Maxim</strong></td>
+                                        <td>Ixian</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Igor</strong></td>
+                                        <td>Bene Gesserit</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Denis Young</strong></td>
+                                        <td>Atreides</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="parties__table-description" colspan="3">
+                                            <strong>Description:</strong>
+                                            Victory by
+                                            prediction. In reality, victory of the Ixian + Fremen alliance in Round 5.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="parties__slide swiper-slide">
+                                <h5 class="parties__table-title">
+                                    <span class="parties__table-title-game"><strong>Game: </strong>3</span>
+                                    <span class="parties__table-title-date"><strong>Date: </strong>13.05.23</span>
+                                </h5>
+                                <table class="parties__table">
+                                    <tr>
+                                        <th><strong>Name</strong></th>
+                                        <th>Faction</th>
+                                        <th>Points</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Nazar</strong></td>
+                                        <td>Ixian</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Bohdan</strong></td>
+                                        <td>Fremen</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Oleg Red</strong></td>
+                                        <td>Atreides</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Maxim</strong></td>
+                                        <td>Bene Gesserit</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Mr Yuri</strong></td>
+                                        <td>Tleilaxu</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Denis Young</strong></td>
+                                        <td>Richese</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="parties__table-description" colspan="3">
+                                            <strong>Description:</strong>
+                                            Victory of the alliance in round 5.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="parties__slide swiper-slide">
+                                <h5 class="parties__table-title">
+                                    <span class="parties__table-title-game"><strong>Game: </strong>2</span>
+                                    <span class="parties__table-title-date"><strong>Date: </strong>07.05.23</span>
+                                </h5>
+                                <table class="parties__table">
+                                    <tr>
+                                        <th><strong>Name</strong></th>
+                                        <th>Faction</th>
+                                        <th>Points</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Igor</strong></td>
+                                        <td>Harkonnen</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Maxim</strong></td>
+                                        <td>Choam</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Mr Yuri</strong></td>
+                                        <td>Richese</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Nazar</strong></td>
+                                        <td>Bene Gesserit</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Ivan</strong></td>
+                                        <td>Atreides</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Denis Young</strong></td>
+                                        <td>Tleilaxu</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="parties__table-description" colspan="3">
+                                            <strong>Description:</strong>
+                                            Victory by tie-break.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="parties__slide swiper-slide">
+                                <h5 class="parties__table-title">
+                                    <span class="parties__table-title-game"><strong>Game: </strong>1</span>
+                                    <span class="parties__table-title-date"><strong>Date: </strong>05.05.23</span>
+                                </h5>
+                                <table class="parties__table">
+                                    <tr>
+                                        <th><strong>Name</strong></th>
+                                        <th>Faction</th>
+                                        <th>Points</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Oleg Old</strong></td>
+                                        <td>Tleilaxu</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Mr Yuri</strong></td>
+                                        <td>Fremen</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Maxim</strong></td>
+                                        <td>Emperor</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Nazar</strong></td>
+                                        <td>Harkonnen</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Bohdan</strong></td>
+                                        <td>Atreides</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Oleg Red</strong></td>
+                                        <td>Ixian</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="parties__table-description" colspan="3">
+                                            <strong>Description:</strong>
+                                            Victory of the alliance in round 6.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="parties__button swiper-button-prev"></div>
+                    <div class="parties__button swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="parties__scrollbar swiper-scrollbar"></div>
+                </div>
+
+            </div>
+
+        </section>
+        <section class="factions" id="factions">
+            <div class="factions__container">
+                <div class="factions__header">
+                    <h3 class="factions__title title">Factions statistics</h3>
+                </div>
+                <table class="factions__table table">
+                    <thead class="factions__thead thead">
+                        <tr>
+                            <th data-sort onclick="sortTable(0, this)">Faction</th>
+                            <th data-sort onclick="sortTable(1, this)">Games</th>
+                            <th data-sort onclick="sortTable(2, this)">Victories</th>
+                            <th data-sort onclick="sortTable(3, this)">Total points</th>
+                            <th data-sort onclick="sortTable(4, this)">Average points</th>
+                        </tr>
+                    </thead>
+                    <tbody class="factions__tbody tbody">
+                        <tr id="atreides">
+                            <td class="factions__faction">
+                                <img src="/images/tokens/Atreides.jpeg" alt="atreides">
+                                <strong>Atreides</strong>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="bene">
+                            <td class="factions__faction">
+                                <img src="/images/tokens/Bene.jpeg" alt="atreides">
+                                <strong>Bene Gesserit</strong>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="harkonnen">
+                            <td class="factions__faction">
+                                <img src="/images/tokens/Harkonnen.jpeg" alt="atreides">
+                                <strong>Harkonnen</strong>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="ixian">
+                            <td class="factions__faction">
+                                <img src="/images/tokens/Ixian.jpeg" alt="atreides">
+                                <strong>Ixian</strong>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="emperor">
+                            <td class="factions__faction">
+                                <img src="/images/tokens/Emperor.jpeg" alt="atreides">
+                                <strong>Emperor</strong>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="guild">
+                            <td class="factions__faction">
+                                <img src="/images/tokens/Guild.jpeg" alt="atreides">
+                                <strong>Guild</strong>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="richese">
+                            <td class="factions__faction">
+                                <img src="/images/tokens/Richese.jpeg" alt="atreides">
+                                <strong>Richese</strong>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="fremen">
+                            <td class="factions__faction">
+                                <img src="/images/tokens/Fremen.jpeg" alt="atreides">
+                                <strong>Fremen</strong>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="choam">
+                            <td class="factions__faction">
+                                <img src="/images/tokens/Choam.jpeg" alt="atreides">
+                                <strong>Choam</strong>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="tleilaxu">
+                            <td class="factions__faction">
+                                <img src="/images/tokens/Tleilaxu.jpeg" alt="atreides">
+                                <strong>Tleilaxu</strong>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="rules" id="rules">
+            <div class="rules__container">
+                <h3 class="rules__title title">Turnament rules</h3>
+                <div class="rules__content">
+                    <div class="rules__block">
+                        <h5 class="rules__block-title">Scoring system:</h5>
+                        <ul class="rules__block-list">
+                            <li>Solo victory - 3 VP (Victory Points)</li>
+                            <li>Union (2 factions) victory - 2 VP each</li>
+                            <li>Bene Gesserit Victory by Prediction - 2 VP</li>
+                            <li>Solo Fremen Victory by Special Condition - 2 VP</li>
+                            <li>Solo Guild Victory by Special Condition - 1 VP</li>
+                            <li>Union (2 factions) Victory by Fremen Special Condition - 1 VP each</li>
+                            <li>Union (2 factions) Victory by Guild Special Condition - 0.5 VP each</li>
+                            <li>Any other possible victory (e.g., Fremen winning at the end of Round 10 when there is no
+                                Guild) - 0.5 VP</li>
+                        </ul>
+                    </div>
+                    <div class="rules__block">
+                        <h5 class="rules__block-title">Game rules. Links:</h5>
+                        <ul class="rules__block-list">
+                            <li><a href="https://www.gf9games.com/dunegame/wp-content/uploads/Dune-Rulebook.pdf"
+                                    target="_blank">Dune
+                                    rulebook</a></li>
+                            <li><a href="https://www.gf9games.com/dunegame/wp-content/uploads/2020/09/IxianAndTleilaxuRulebook.pdf"
+                                    target="_blank">Ixian
+                                    and Tleilaxu rulebook</a></li>
+                            <li><a href="http://www.boardgamers.org/wbc22/previews/dun.html" target="_blank">2022
+                                    Tournament Format</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="contacts" id="contacts">
+        <div class="contacts__container">
+            <div class="contacts__block">
+                <ul class="contacts__list">
+                    <li><a class="contacts__discord" href="https://discord.gg/7Mvwff4Z" target="_blank"><ion-icon
+                                name="logo-discord"></ion-icon></a></li>
+                    <li><a class="contacts__telegram" href="https://t.me/white_rabbit_ternopil"
+                            target="_blank"><ion-icon name="navigate"></ion-icon></a></li>
+                    <li><a class="contacts__facebook" href="https://www.facebook.com/pg/WhiteRabbitTernopil/posts/"
+                            target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contacts__created">Created by Bohdan</div>
+        </div>
+    </footer>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/sortTable.js"></script>
+    <script src="js/dropDown.js"></script>
+    <script src="js/players.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

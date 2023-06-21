@@ -1,0 +1,135 @@
+.button {
+    padding-top: rem(10);
+    padding-right: rem(20);
+    padding-bottom: rem(10);
+    padding-left: rem(20);
+    border-radius: rem(5);
+    background-color: rgb(29, 86, 177);
+    transition: background-color linear 0.2s;
+
+    &:hover {
+        background-color: rgba(29, 86, 177, 0.699)
+    }
+}
+
+.input {
+    width: 100%;
+    padding-top: rem(10);
+    padding-right: rem(20);
+    padding-bottom: rem(10);
+    padding-left: rem(20);
+    border-radius: rem(5);
+    background-color: rgb(212, 211, 211);
+}
+
+.title {
+    font-size: rem(34);
+}
+
+.result {
+    display: block;
+    font-size: rem(34);
+    margin-top: rem(20);
+    color: blue;
+}
+
+.table {
+    margin: 0 auto;
+    table-layout: fixed;
+    width: 90%;
+    border-collapse: collapse;
+    background: rgba(244, 194, 80);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    border-radius: rem(6);
+}
+
+.table th {
+    cursor: pointer;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding-right: rem(10);
+    font-size: rem(18);
+    padding: rem(8) rem(12) rem(8) rem(12);
+    border-bottom: 1px solid #9d0a0d;
+    user-select: none;
+    transition: all linear 0.16s;
+}
+
+.table th[data-sort] {
+    padding: rem(8) rem(22) rem(8) rem(12);
+}
+
+.table th.asc,
+.table th.desc {
+    color: #9d0a0d;
+}
+
+.table th[data-sort]::before,
+.table th[data-sort]::after {
+    content: "";
+    position: absolute;
+    right: 10%;
+    height: rem(0);
+    width: rem(0);
+    opacity: 0.3;
+    border: rem(5) solid transparent;
+}
+
+.table th[data-sort]::before {
+    top: rem(8);
+    border-bottom-color: #9d0a0d;
+}
+
+.table th[data-sort]::after {
+    top: rem(20);
+    border-top-color: #9d0a0d;
+}
+
+.table th.asc::before,
+.table th.desc::after {
+    opacity: 1;
+}
+
+.table td {
+    padding: rem(8) rem(12) rem(8) rem(12);
+    font-size: rem(16);
+    text-align: center;
+    border-bottom: 1px solid #e59c0a;
+}
+
+.tbody tr:nth-child(odd) {
+    background-color: darken($color: rgba(244, 194, 80), $amount: 5);
+}
+
+// RESPONSIVE DESING
+
+@media(max-width: $tablet) {
+    .title {
+        font-size: rem(30);
+    }
+}
+
+@media(max-width: $mobile) {
+    .title {
+        font-size: rem(28);
+    }
+
+    .table th {
+        font-size: rem(14);
+    }
+
+    .table td {
+        font-size: rem(12);
+        padding: rem(8) rem(12) rem(8) rem(5);
+    }
+
+    .table th[data-sort]::before {
+        top: rem(5);
+    }
+
+    .table th[data-sort]::after {
+        top: rem(16);
+    }
+}

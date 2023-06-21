@@ -1,0 +1,115 @@
+.header {
+
+    &__navbar {
+        padding: rem(0) rem(20) rem(0) rem(20);
+        height: rem(50);
+        position: fixed;
+        display: flex;
+        z-index: 9999;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__navbar a:hover {
+        color: #ae0c0c;
+    }
+
+    &__navbar a.active {
+        color: #ae0c0c;
+    }
+
+    &__home {
+        display: flex;
+        align-items: center;
+        flex: 1 0 auto;
+        font-size: rem(24);
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        height: rem(50);
+        @include adaptiveValue('gap', 60, 10);
+        font-size: rem(24);
+    }
+
+    &__toggle_btn {
+        font-size: rem(24);
+        cursor: pointer;
+        display: none;
+    }
+}
+
+// DROPDOWN MENU
+.header {
+    &__dropdown-menu {
+        position: absolute;
+        right: rem(20);
+        top: rem(50);
+        width: rem(250);
+        height: rem(0);
+        background: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(rem(5));
+        border-radius: rem(10);
+        overflow: hidden;
+        transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    &__dropdown-menu.open {
+        height: rem(240);
+    }
+
+    &__dropdown-menu li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__dropdown-menu li a {
+        text-align: center;
+        width: 100%;
+        padding-top: rem(14);
+        padding-bottom: rem(14);
+    }
+}
+
+.navBarBgColor {
+    background: rgba(246, 169, 12);
+}
+
+// RESPONSIVE DESING
+@media(max-width: $tablet) {
+    .header {
+        &__home {
+            font-size: rem(20);
+        }
+
+        &__links {
+            font-size: rem(20);
+        }
+    }
+}
+
+@media(max-width: $mobile) {
+    .header {
+
+        &__links {
+            display: none;
+        }
+
+        &__toggle_btn {
+            display: block;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+@media(max-width: $mobileSmall) {
+    .header {
+        &__dropdown-menu {
+            left: rem(36);
+            width: unset;
+        }
+    }
+}

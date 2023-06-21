@@ -1,0 +1,382 @@
+.main {
+    width: 100%;
+}
+
+.home {
+    position: relative;
+    height: 100vh;
+    background-image: url('/images/dune_1.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__container {
+        height: calc(100vh - rem(100));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        @include adaptiveValue('gap', 50, 10);
+    }
+
+    &__container img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__title {
+        font-size: rem(22);
+        font-style: italic;
+    }
+}
+
+.rating {
+    // padding-top: rem(120);
+    // padding-bottom: rem(70);
+    background: rgb(230, 136, 28);
+    background: linear-gradient(0deg, rgba(230, 136, 28, 1) 0%, rgba(148, 11, 12, 1) 100%);
+    padding-bottom: rem(50);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        @include adaptiveValue('gap', 90, 30);
+        @include adaptiveValue('padding-top', 105, 60);
+        @include adaptiveValue('padding-bottom', 120, 40);
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include adaptiveValue('gap', 20, 10);
+    }
+
+    &__subtitle {
+        text-align: center;
+    }
+}
+
+.parties {
+    //position: relative;
+
+    &__container {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(0deg, rgba(148, 11, 12, 1), rgba(230, 136, 28, 1));
+        @include adaptiveValue('gap', 50, 10);
+        @include adaptiveValue('padding-top', 90, 60);
+        @include adaptiveValue('padding-bottom', 110, 40);
+    }
+
+    &__title {
+        position: relative;
+        z-index: 1;
+        font-size: rem(42);
+        background-color: #e59c0a;
+        padding: rem(10) rem(35) rem(15) rem(35);
+        border-radius: rem(15);
+    }
+
+    &__slider {
+        max-width: rem(1230);
+        width: 100%;
+        //background-color: gray;
+        padding: rem(40) 0;
+    }
+
+    &__sliger-bg {
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(/images/dune_bg1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__slider-container {
+        margin: rem(0) rem(55) rem(0) rem(55);
+        overflow: hidden;
+    }
+
+    &__slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: rem(10) rem(5) rem(20) rem(5);
+        background-color: #e59c0a;
+        border-radius: rem(15);
+    }
+
+    &__table {
+        table-layout: fixed;
+        max-width: rem(370);
+        width: 100%;
+        border-radius: rem(16);
+    }
+
+    &__table-title {
+        padding: rem(0) rem(20) rem(5) rem(20);
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__table th {
+        cursor: pointer;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        position: relative;
+        padding-right: rem(10);
+        font-size: rem(18);
+        padding: rem(8) rem(12) rem(8) rem(12);
+        border: 2px solid #a0190a;
+        border-radius: rem(16);
+        user-select: none;
+        transition: all linear 0.16s;
+    }
+
+    &__table td {
+        padding: rem(8) rem(12) rem(8) rem(12);
+        font-size: rem(16);
+        text-align: center;
+        border: 1px solid #a0190a;
+        border-radius: rem(16);
+    }
+
+    &__button {
+        color: $mainColor;
+        height: 40px;
+        width: 40px;
+        background: #e59c0a;
+        border-radius: 50%;
+        transition: background .2s linear;
+    }
+
+    &__button:hover {
+        background: darken($color: #e59c0a, $amount: 5);
+        //background: #a0190a;
+    }
+
+    &__button::before,
+    &__button::after {
+        font-size: rem(22);
+    }
+
+    &__scrollbar {
+        cursor: pointer;
+        padding-bottom: rem(10);
+        height: rem(10);
+        background: #e59c0a;
+    }
+
+    .swiper-scrollbar-drag {
+        height: rem(10);
+        background: #a0190a;
+    }
+}
+
+.factions {
+    background: rgb(230, 136, 28);
+    background: linear-gradient(0deg, rgba(230, 136, 28, 1) 0%, rgba(148, 11, 12, 1) 100%);
+    padding-bottom: rem(50);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        @include adaptiveValue('gap', 90, 30);
+        @include adaptiveValue('padding-top', 105, 60);
+        @include adaptiveValue('padding-bottom', 120, 40);
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include adaptiveValue('gap', 20, 10);
+    }
+
+    &__faction {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__faction img {
+        width: rem(30);
+        height: rem(30);
+        border-radius: 50%;
+        @include adaptiveValue('margin-right', 20, 0);
+        @include adaptiveValue('margin-left', 35, 0);
+    }
+}
+
+.rules {
+    background-image: url(/images/rules_bg-1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: rem(110) rem(0) rem(110) rem(0);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include adaptiveValue('gap', 50, 20)
+    }
+
+    &__title {
+        position: relative;
+        z-index: 1;
+        font-size: rem(42);
+        background-color: #e59c0a;
+        padding: rem(10) rem(35) rem(15) rem(35);
+        border-radius: rem(15);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        @include adaptiveValue('gap', 50, 20)
+    }
+
+    &__block {
+        height: 100%;
+        width: 100%;
+        min-width: rem(370);
+        background-color: #e59c0a;
+        padding: rem(20) rem(25) rem(20) rem(45);
+        border-radius: rem(15);
+    }
+
+    &__block-title {
+        font-size: rem(24);
+        margin-bottom: rem(15);
+    }
+
+    &__block-list li {
+        width: 100%;
+        list-style: disc;
+        margin-bottom: rem(10);
+        font-size: rem(20);
+        line-height: em(25);
+    }
+
+    &__block-list li a {
+        cursor: pointer;
+        display: inline-block;
+        width: 100%;
+        font-style: italic;
+        text-decoration: underline;
+    }
+
+    &__block-list li a:hover {
+        color: rgb(6, 69, 173);
+    }
+}
+
+.contacts {
+    height: rem(70);
+    display: flex;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-size: rem(26);
+    }
+
+    &__block {
+        // margin-left: rem(50);
+    }
+
+    &__list {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: rem(25);
+        flex-wrap: wrap;
+    }
+
+    &__list li a {
+        cursor: pointer;
+        display: inline-block;
+        transition: all 0.3s linear;
+    }
+
+    &__list a:hover {
+        color: rgb(6, 69, 173);
+        transform: translateY(-10px);
+    }
+
+    &__list li a ion-icon {
+        margin-right: rem(5);
+        font-size: rem(32);
+    }
+
+    &__created {
+        font-size: rem(24);
+        font-style: italic;
+    }
+}
+
+
+
+// RESPONSIVE DESING
+@media(max-width: $tablet) {
+
+    .rating__subtitle {
+        font-size: rem(20);
+    }
+
+    .rules__content {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(max-width: $mobile) {
+
+    .rating__subtitle {
+        font-size: rem(12);
+    }
+
+    .factions__faction img {
+        width: rem(25);
+        height: rem(25);
+    }
+}
+
+@media(max-width: $mobileSmall) {
+    .home {
+        &__title {
+            font-size: rem(12);
+            max-width: rem(300);
+        }
+    }
+
+    .factions__faction img {
+        display: none;
+    }
+}
