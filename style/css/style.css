@@ -663,6 +663,12 @@ h6 {
   }
 }
 
+#bene td strong {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .rules {
   background-image: url("https://www.jestatharogue.com/wp-content/uploads/2023/01/Dune-Game-Board.jpg?x36035");
   background-repeat: no-repeat;
