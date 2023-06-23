@@ -1,6 +1,6 @@
 function sortTable(n, evt) {
     const tableIndex = [...DOM.ratingTheads].findIndex(thead => thead.contains(evt));
-    const table = DOM.ratingTables[tableIndex];
+    //const table = DOM.ratingTables[tableIndex];
     const thead = DOM.ratingTheads[tableIndex];
     const tbody = DOM.ratingTbodies[tableIndex];
 
@@ -19,8 +19,8 @@ function sortTable(n, evt) {
     evt.classList[desc ? 'add' : 'remove']('desc');
 
     bRows.sort((a, b) => {
-        let x = parseInt(a.getElementsByTagName('td')[n].innerHTML.toLowerCase()),
-            y = parseInt(b.getElementsByTagName('td')[n].innerHTML.toLowerCase());
+        let x = parseFloat(a.getElementsByTagName('td')[n].innerHTML),
+            y = parseFloat(b.getElementsByTagName('td')[n].innerHTML);
         return desc ? (x < y ? 1 : -1) : (x < y ? -1 : 1);
     });
 
