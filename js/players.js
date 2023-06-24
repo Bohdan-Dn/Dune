@@ -47,7 +47,7 @@ const players = {
         choam: { games: 0, victories: 0, points: 0 },
         tleilaxu: { games: 0, victories: 0, points: 0 },
     },
-    denisYoung: {
+    denisJunior: {
         atreides: { games: 1, victories: 0, points: 0 },
         bene: { games: 1, victories: 0, points: 0 },
         guild: { games: 1, victories: 0, points: 0 },
