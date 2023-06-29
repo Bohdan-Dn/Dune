@@ -74,7 +74,7 @@
     height: rem(0);
     width: rem(0);
     opacity: 0.3;
-    border: rem(5) solid transparent;
+    border: rem(4) solid transparent;
 }
 
 .table th[data-sort]::before {
@@ -118,6 +118,18 @@
 
     .table th {
         font-size: rem(14);
+    }
+
+    .table th[data-sort] {
+        padding: rem(8) rem(12) rem(8) rem(12);
+    }
+
+    .table th[data-sort]::before {
+        top: rem(12);
+    }
+
+    .table th[data-sort]::after {
+        top: rem(18);
     }
 
     .table td {

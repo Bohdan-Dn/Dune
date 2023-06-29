@@ -10,4 +10,9 @@ const DOM = {
     sections: document.querySelectorAll('section'),
     navLinks: document.querySelectorAll('header nav a'),
     statistic: document.querySelector('.factions__tbody'),
+    modal: document.getElementById('modal'),
+    modalTitle: document.querySelector('.modal__title'),
+    modalBody: document.querySelector('.modal__tbody'),
+    overlay: document.getElementById('overlay'),
+    closeModalButtons: document.querySelectorAll('[data-close-button]'),
 };
