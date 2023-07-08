@@ -15,4 +15,6 @@ const DOM = {
     modalBody: document.querySelector('.modal__tbody'),
     overlay: document.getElementById('overlay'),
     closeModalButtons: document.querySelectorAll('[data-close-button]'),
+    partiesSlider: document.querySelector('.parties__slider-wrapper'),
+    partiesTable: document.querySelector('.parties__table'),
 };

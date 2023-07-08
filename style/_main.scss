@@ -157,6 +157,15 @@
         border-radius: rem(16);
     }
 
+    &__player {
+        transition: color 0.3s linear;
+    }
+
+    &__player:hover {
+        cursor: pointer;
+        color: rgb(6, 69, 173);
+    }
+
     &__button {
         color: $mainColor;
         height: 40px;
