@@ -197,7 +197,7 @@ const parties = [
     },
     {
         date: '2023-07-12',
-        partyNumber: 14,
+        partyNumber: 15,
         players: [
             { player: 'Mr Yuri', faction: 'Harkonnen', points: 2 },
             { player: 'Denis Junior', faction: 'Bene', points: 0 },
