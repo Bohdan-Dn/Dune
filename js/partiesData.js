@@ -193,6 +193,20 @@ const parties = [
             { player: 'Bohdan', faction: 'Ixian', points: 2 }
         ],
         winners: ['Bohdan', 'Ivan'],
-        description: 'Solo victory in round 4.',
+        description: 'Victory of the alliance in round 4.',
+    },
+    {
+        date: '2023-07-12',
+        partyNumber: 14,
+        players: [
+            { player: 'Mr Yuri', faction: 'Harkonnen', points: 2 },
+            { player: 'Denis Junior', faction: 'Bene', points: 0 },
+            { player: 'Oleg Old', faction: 'Emperor', points: 0 },
+            { player: 'Igor', faction: 'Ixian', points: 2 },
+            { player: 'Misha', faction: 'Richese', points: 0 },
+            { player: 'Bohdan', faction: 'Atreides', points: 0 }
+        ],
+        winners: ['Mr Yuri', 'Igor'],
+        description: 'Victory of the alliance in round 2.',
     },
 ];
