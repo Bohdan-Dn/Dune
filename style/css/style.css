@@ -826,7 +826,7 @@ h6 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   padding-bottom: 0.9375rem;
   margin: 0rem auto 0.9375rem auto;
   padding: 0rem 2% 0.625rem 5%;
@@ -834,6 +834,11 @@ h6 {
 }
 .modal__title {
   font-size: 2.125rem;
+}
+.modal__ban {
+  text-align: center;
+  font-size: 1.75rem;
+  padding: 0rem 0.3125rem 0rem 0.3125rem;
 }
 .modal__button {
   font-size: 4.5rem;
@@ -897,6 +902,12 @@ h6 {
     width: 1.5625rem;
     height: 1.5625rem;
   }
+  .modal__title {
+    font-size: 1.75rem;
+  }
+  .modal__ban {
+    font-size: 1.25rem;
+  }
   .parties__button {
     display: none;
   }
@@ -937,7 +948,10 @@ h6 {
     padding: 0rem 2% 0.3125rem 5%;
   }
   .modal__title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+  }
+  .modal__ban {
+    font-size: 0.875rem;
   }
   .modal__button {
     font-size: 3rem;

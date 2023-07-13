@@ -376,7 +376,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: end;
         padding-bottom: rem(15);
         margin: rem(0) auto rem(15) auto;
         padding: rem(0) 2% rem(10) 5%;
@@ -385,6 +385,12 @@
 
     &__title {
         font-size: rem(34);
+    }
+
+    &__ban {
+        text-align: center;
+        font-size: rem(28);
+        padding: rem(0) rem(5) rem(0) rem(5);
     }
 
     &__button {
@@ -462,6 +468,16 @@
         height: rem(25);
     }
 
+    .modal {
+        &__title {
+            font-size: rem(28);
+        }
+
+        &__ban {
+            font-size: rem(20);
+        }
+    }
+
     .parties__button {
         display: none;
     }
@@ -514,7 +530,11 @@
         }
 
         &__title {
-            font-size: rem(24);
+            font-size: rem(20);
+        }
+
+        &__ban {
+            font-size: rem(14);
         }
 
         &__button {

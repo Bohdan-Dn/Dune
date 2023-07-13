@@ -13,6 +13,7 @@ const DOM = {
     modal: document.getElementById('modal'),
     modalTitle: document.querySelector('.modal__title'),
     modalBody: document.querySelector('.modal__tbody'),
+    modalBan: document.querySelector('.modal__ban'),
     overlay: document.getElementById('overlay'),
     closeModalButtons: document.querySelectorAll('[data-close-button]'),
     partiesSlider: document.querySelector('.parties__slider-wrapper'),

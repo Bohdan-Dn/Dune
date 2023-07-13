@@ -166,6 +166,7 @@ function addDataToModal(event) {
     let player = event.target.innerHTML
     let elements = DOM.modalBody.children;
     DOM.modalTitle.innerHTML = event.target.innerHTML;
+    DOM.modalBan.innerHTML = 'Next game ban: ' + getPlayerLastFactions(event.target.innerHTML);
     for (let i = 0; i < elements.length; i++) {
         const element = elements[i];
         let games = countGamesForPlayerAndFaction(player, element.id);
@@ -223,4 +224,29 @@ function countPointsForPlayerAndFaction(player, faction) {
         }
     }
     return totalPoints;
+};
+
+function getPlayerLastFactions(playerName) {
+    const playerParties = parties.filter((party) => {
+        const playerIndex = party.players.findIndex(
+            (player) => player.player === playerName
+        );
+        return playerIndex !== -1;
+    });
+
+    if (playerParties.length >= 2) {
+        const lastTwoParties = playerParties.slice(-2);
+        const lastTwoFactions = lastTwoParties.map((party) => {
+            const player = party.players.find((player) => player.player === playerName);
+            return player.faction;
+        });
+        return lastTwoFactions.join(', ');
+    } else if (playerParties.length === 1) {
+        const faction = playerParties[0].players.find(
+            (player) => player.player === playerName
+        ).faction;
+        return [faction];
+    } else {
+        return [];
+    }
 };
