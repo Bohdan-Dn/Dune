@@ -742,7 +742,6 @@ h6 {
 .rules__block {
   height: 100%;
   width: 100%;
-  min-width: 23.125rem;
   background-color: #e59c0a;
   padding: 1.25rem 1.5625rem 1.25rem 2.8125rem;
   border-radius: 0.9375rem;
