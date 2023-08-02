@@ -108,8 +108,7 @@
 @media(max-width: $mobileSmall) {
     .header {
         &__dropdown-menu {
-            left: rem(36);
-            width: unset;
+            width: 90%;
         }
     }
 }

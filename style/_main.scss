@@ -54,6 +54,28 @@
         @include adaptiveValue('gap', 20, 10);
     }
 
+    &__dropdown {
+        display: flex;
+        align-items: flex-end;
+        gap: rem(20);
+        line-height: math.div(24, 18);
+        cursor: pointer;
+        transition: all 0.3s linear;
+    }
+
+    &__dropdown:hover {
+        color: rgb(6, 69, 173);
+        color: darken($color: rgb(6, 69, 173), $amount: 15);
+    }
+
+    &__dropdown i::before {
+        font-size: rem(24);
+    }
+
+    &__dropdown-menu {
+        display: none;
+    }
+
     &__subtitle {
         text-align: center;
     }

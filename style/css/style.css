@@ -139,6 +139,7 @@ h6 {
 
 .title {
   font-size: 2.125rem;
+  line-height: 1;
 }
 
 .result {
@@ -347,8 +348,7 @@ h6 {
 }
 @media (max-width: 29.99875em) {
   .header__dropdown-menu {
-    left: 2.25rem;
-    width: unset;
+    width: 90%;
   }
 }
 .main {
@@ -446,6 +446,24 @@ h6 {
   .rating__header {
     gap: calc(0.625rem + 0.625 * (100vw - 20rem) / 81.875);
   }
+}
+.rating__dropdown {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.25rem;
+  line-height: 1.3333333333;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.rating__dropdown:hover {
+  color: rgb(6, 69, 173);
+  color: #032863;
+}
+.rating__dropdown i::before {
+  font-size: 1.5rem;
+}
+.rating__dropdown-menu {
+  display: none;
 }
 .rating__subtitle {
   text-align: center;
