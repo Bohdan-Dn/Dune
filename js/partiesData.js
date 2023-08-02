@@ -279,4 +279,18 @@ const parties = [
         winners: ['Bohdan', 'Oleg Old'],
         description: 'Victory of the alliance in round 8.',
     },
+    {
+        date: '2023-08-01',
+        partyNumber: 21,
+        players: [
+            { player: 'Oleg', faction: 'Fremen', points: 0.5 },
+            { player: 'Ivan', faction: 'Harkonnen', points: 0 },
+            { player: 'Bohdan', faction: 'Bene', points: 0 },
+            { player: 'Igor', faction: 'Guild', points: 0.5 },
+            { player: 'Oleg Old', faction: 'Ixian', points: 0 },
+            { player: 'Nazar', faction: 'Tleilaxu', points: 0 }
+        ],
+        winners: ['Oleg', 'Igor'],
+        description: 'Victory by Guild ability.',
+    },
 ];
