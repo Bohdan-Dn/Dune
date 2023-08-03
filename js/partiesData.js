@@ -293,4 +293,18 @@ const parties = [
         winners: ['Oleg', 'Igor'],
         description: 'Victory by Guild ability.',
     },
+    {
+        date: '2023-08-02',
+        partyNumber: 22,
+        players: [
+            { player: 'Bohdan', faction: 'Fremen', points: 0 },
+            { player: 'Ivan', faction: 'Guild', points: 0.5 },
+            { player: 'Nazar', faction: 'Bene', points: 0 },
+            { player: 'Igor', faction: 'Ixian', points: 0 },
+            { player: 'Misha', faction: 'Richese', points: 0 },
+            { player: 'Andriy', faction: 'Choam', points: 0.5 }
+        ],
+        winners: ['Andriy', 'Ivan'],
+        description: 'Victory by Guild ability.',
+    },
 ];
