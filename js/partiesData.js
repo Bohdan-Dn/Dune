@@ -308,3 +308,4 @@ const parties = [
         description: 'Victory by Guild ability.',
     },
 ];
+
