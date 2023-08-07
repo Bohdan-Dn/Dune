@@ -290,6 +290,12 @@ h6 {
     gap: calc(0.625rem + 3.125 * (100vw - 20rem) / 81.875);
   }
 }
+.header__season {
+  cursor: pointer;
+}
+.header__season i {
+  font-size: 1.25rem;
+}
 .header__toggle_btn {
   font-size: 1.5rem;
   cursor: pointer;
@@ -323,6 +329,9 @@ h6 {
   padding-top: 0.875rem;
   padding-bottom: 0.875rem;
 }
+.header__dropdown-menu li i {
+  font-size: 1rem;
+}
 
 .navBarBgColor {
   background: rgb(246, 169, 12);
@@ -334,6 +343,9 @@ h6 {
   }
   .header__links {
     font-size: 1.25rem;
+  }
+  .header__season i {
+    font-size: 1rem;
   }
 }
 @media (max-width: 47.99875em) {

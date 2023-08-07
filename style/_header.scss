@@ -33,6 +33,14 @@
         font-size: rem(24);
     }
 
+    &__season {
+        cursor: pointer;
+    }
+
+    &__season i {
+        font-size: rem(20);
+    }
+
     &__toggle_btn {
         font-size: rem(24);
         cursor: pointer;
@@ -71,6 +79,10 @@
         padding-top: rem(14);
         padding-bottom: rem(14);
     }
+
+    &__dropdown-menu li i {
+        font-size: rem(16);
+    }
 }
 
 .navBarBgColor {
@@ -86,6 +98,10 @@
 
         &__links {
             font-size: rem(20);
+        }
+
+        &__season i {
+            font-size: rem(16);
         }
     }
 }
