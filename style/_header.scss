@@ -48,6 +48,60 @@
     }
 }
 
+.season {
+
+    &__link {
+        cursor: pointer;
+    }
+
+    &__arrow {
+        font-size: rem(20);
+        transition: transform .3s ease-out;
+    }
+
+    &__dropdown {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .4s ease-out;
+        position: absolute;
+        top: rem(50);
+        display: flex;
+        align-items: center;
+        gap: rem(15);
+        flex-direction: column;
+        min-width: rem(200);
+        background: lighten($color: rgba(246, 169, 12, 1), $amount: 4);
+    }
+
+    &__dropdown-link:first-child {
+        padding-top: rem(15);
+    }
+
+    &__dropdown-link:last-child {
+        padding-bottom: rem(15);
+    }
+
+    &__dropdown-link {
+        cursor: pointer;
+        font-size: rem(20);
+        transition: color .2s linear;
+    }
+
+    &__dropdown-link:hover {
+        color: #ae0c0c;
+    }
+}
+
+.season:hover .season__dropdown {
+    max-height: 1000px;
+    transition: max-height .4s ease-in;
+}
+
+.season:hover .season__arrow {
+    transform: rotate(180deg);
+    transition: transform .3s ease-in;
+}
+
 // DROPDOWN MENU
 .header {
     &__dropdown-menu {
@@ -55,7 +109,7 @@
         right: rem(20);
         top: rem(50);
         width: rem(250);
-        height: rem(0);
+        max-height: rem(0);
         background: rgba(246, 169, 12, 0.9);
         backdrop-filter: blur(5px);
         border-radius: rem(10);
@@ -64,7 +118,7 @@
     }
 
     &__dropdown-menu.open {
-        height: rem(240);
+        max-height: rem(500);
     }
 
     &__dropdown-menu li {
@@ -104,6 +158,10 @@
             font-size: rem(16);
         }
     }
+
+    .season__arrow {
+        font-size: rem(16);
+    }
 }
 
 @media(max-width: $mobile) {
@@ -119,12 +177,36 @@
             align-items: center;
         }
     }
+
+    .season {
+        display: flex;
+        flex-direction: column;
+
+        &__dropdown {
+            position: static;
+            width: 100%;
+        }
+
+        &__arrow {
+            font-size: rem(14);
+        }
+
+        &__dropdown-link {
+            font-size: rem(16);
+        }
+    }
 }
 
 @media(max-width: $mobileSmall) {
     .header {
         &__dropdown-menu {
             width: 90%;
+        }
+    }
+
+    .season {
+        &__dropdown-link {
+            font-size: rem(14);
         }
     }
 }
