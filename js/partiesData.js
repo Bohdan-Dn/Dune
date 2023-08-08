@@ -307,6 +307,20 @@ const parties = [
         winners: ['Andriy', 'Ivan'],
         description: 'Victory by Guild ability.',
     },
+    {
+        date: '2023-08-07',
+        partyNumber: 23,
+        players: [
+            { player: 'Mr Yuri', faction: 'Emperor', points: 0 },
+            { player: 'Ivan', faction: 'Ixian', points: 0 },
+            { player: 'Nazar', faction: 'Guild', points: 0 },
+            { player: 'Igor', faction: 'Harkonnen', points: 2 },
+            { player: 'Murloc', faction: 'Fremen', points: 0 },
+            { player: 'Andriy', faction: 'Bene', points: 2 }
+        ],
+        winners: ['Andriy', 'Igor'],
+        description: 'Victory of the alliance in round 10.',
+    },
 ];
 
 const startFirstSeasonDate = '2023-05-01';
