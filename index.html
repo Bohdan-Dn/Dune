@@ -5,32 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style/css/style.css">
     <link rel="icon" href="images/duneHead.webp">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+    <script src="js/slider.js" defer></script>
+    <script src="js/dom.js" defer></script>
+    <script src="js/scroll.js" defer></script>
+    <script src="js/sortTable.js" defer></script>
+    <script src="js/dropDown.js" defer></script>
+    <script src="js/partiesData.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/parties.js" defer></script>
+
     <title>Dune tournament</title>
 </head>
 
 <body>
-    <header class="header">
-        <nav class="header__navbar" id="navbar">
-            <div class="header__home"><a class="header__link-home" href="#home">Home</a></div>
+    <header class="header" id="header">
 
+        <div class="header__logo">
+            <a class="header__link-home" href="#home"></i><img src="/images/dune-6808172_1280.webp"
+                    alt="fremenLogo"></a>
+        </div>
+
+        <div class="header__filter filter">
+            <div class="filter__wrapper">
+                <i class="fa-regular fa-calendar-days filter__calendar"></i>
+                Season
+                <i class="fa-solid fa-sort-down filter__arrow"></i>
+            </div>
+            <ul class="filter__list">
+                <li class="filter__item">All games</li>
+                <li class="filter__item">First season</li>
+                <li class="filter__item">Second season</li>
+            </ul>
+        </div>
+
+        <nav class="header__navbar" id="navbar">
             <ul class="header__links">
-                <li class="header__link season">
-                    <a class="header__link-season season__link">
-                        Season <i class="fa-solid fa-angle-down season__arrow"></i>
-                    </a>
-                    <ul class="season__dropdown">
-                        <li class="season__dropdown-link">All games</li>
-                        <li class="season__dropdown-link">First season</li>
-                        <li class="season__dropdown-link">Second season</li>
-                        <li class="season__dropdown-link">Third season</li>
-                    </ul>
-                </li>
+                <li class="header__link"><a class="header__link-season" href="#season">Tournament</a>
                 <li class="header__link"><a class="header__link-parties" href="#parties">Game parties</a>
                 </li>
                 <li class="header__link"><a class="header__link-factions" href="#factions">Factions</a></li>
@@ -42,17 +63,7 @@
             </div>
 
             <ul class="header__dropdown-menu">
-                <li class="header__link season">
-                    <a class="header__link-season season__link">
-                        Season <i class="fa-solid fa-angle-down season__arrow"></i>
-                    </a>
-                    <ul class="season__dropdown">
-                        <li class="season__dropdown-link">All games</li>
-                        <li class="season__dropdown-link">First season</li>
-                        <li class="season__dropdown-link">Second season</li>
-                        <li class="season__dropdown-link">Third season</li>
-                    </ul>
-                </li>
+                <li class="header__link"><a class="header__link-season" href="#season">Tournament</a>
                 <li class="header__link"><a class="header__link-parties" href="#parties">Game parties</a>
                 </li>
                 <li class="header__link"><a class="header__link-factions" href="#factions">Factions</a></li>
@@ -60,12 +71,13 @@
                 <li class="header__link"><a class="header__link-contacts" href="#contacts">Contacts</a></li>
             </ul>
         </nav>
+
     </header>
 
     <main class="main">
 
         <section class="home" id="home">
-            <div class="home__container" id="home">
+            <div class="home__container">
                 <img src="images/duneLogo.png" alt="dune">
                 <h1 class="home__title">Board game takes over 'White Rabbit' club...
                     Immerse yourself in an epic
@@ -472,18 +484,6 @@
     </footer>
     <div id="overlay"></div>
 
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="js/slider.js"></script>
-    <script src="js/dom.js"></script>
-    <script src="js/scroll.js"></script>
-    <script src="js/sortTable.js"></script>
-    <script src="js/dropDown.js"></script>
-    <script src="js/partiesData.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/parties.js"></script>
 </body>
 
 </html>

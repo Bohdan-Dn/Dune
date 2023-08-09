@@ -87,6 +87,7 @@ h6 {
   overflow: hidden;
   touch-action: none;
 }
+
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -253,7 +254,10 @@ h6 {
     top: 1rem;
   }
 }
-.header__navbar {
+.header {
+  display: flex;
+  align-items: center;
+  flex: 1 0 auto;
   padding: 0rem 1.25rem 0rem 1.25rem;
   height: 3.125rem;
   position: fixed;
@@ -262,17 +266,14 @@ h6 {
   width: 100%;
   justify-content: space-between;
 }
+.header__logo img {
+  max-width: 35px;
+}
 .header__navbar a:hover {
   color: #ae0c0c;
 }
 .header__navbar a.active {
   color: #ae0c0c;
-}
-.header__home {
-  display: flex;
-  align-items: center;
-  flex: 1 0 auto;
-  font-size: 1.5rem;
 }
 .header__links {
   display: flex;
@@ -290,61 +291,64 @@ h6 {
     gap: calc(0.625rem + 3.125 * (100vw - 20rem) / 81.875);
   }
 }
-.header__season {
-  cursor: pointer;
-}
-.header__season i {
-  font-size: 1.25rem;
-}
 .header__toggle_btn {
   font-size: 1.5rem;
   cursor: pointer;
   display: none;
 }
+.header__toggle_btn i {
+  min-width: 1.5rem;
+}
 
-.season__link {
+.filter {
+  font-size: 1.5rem;
   cursor: pointer;
+  position: relative;
 }
-.season__arrow {
-  font-size: 1.25rem;
-  transition: transform 0.3s ease-out;
-}
-.season__dropdown {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease-out;
-  position: absolute;
-  top: 3.125rem;
+.filter__wrapper {
   display: flex;
   align-items: center;
-  gap: 0.9375rem;
-  flex-direction: column;
-  min-width: 12.5rem;
-  background: #f7b020;
+  gap: 0.4375rem;
+  transition: color 0.3s linear;
 }
-.season__dropdown-link:first-child {
-  padding-top: 0.9375rem;
-}
-.season__dropdown-link:last-child {
-  padding-bottom: 0.9375rem;
-}
-.season__dropdown-link {
-  cursor: pointer;
-  font-size: 1.25rem;
-  transition: color 0.2s linear;
-}
-.season__dropdown-link:hover {
+.filter__wrapper:hover {
   color: #ae0c0c;
 }
-
-.season:hover .season__dropdown {
-  max-height: 1000px;
-  transition: max-height 0.4s ease-in;
+.filter__calendar, .filter__arrow {
+  font-size: 1.25rem;
 }
-
-.season:hover .season__arrow {
-  transform: rotate(180deg);
-  transition: transform 0.3s ease-in;
+.filter__list {
+  position: absolute;
+  top: 2.25rem;
+  left: -50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  width: 12.5rem;
+  height: 0rem;
+  background: rgba(246, 169, 12, 0.9);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 0.625rem;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+.filter__list.open {
+  height: 8.125rem;
+}
+.filter__item:first-child {
+  margin-top: 0.9375rem;
+}
+.filter__item:last-child {
+  margin-bottom: 0.9375rem;
+}
+.filter__item {
+  transition: color 0.3s linear;
+}
+.filter__item:hover {
+  color: #ae0c0c;
 }
 
 .header__dropdown-menu {
@@ -358,7 +362,7 @@ h6 {
           backdrop-filter: blur(5px);
   border-radius: 0.625rem;
   overflow: hidden;
-  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: max-height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .header__dropdown-menu.open {
   max-height: 31.25rem;
@@ -378,22 +382,22 @@ h6 {
   font-size: 1rem;
 }
 
-.navBarBgColor {
+.headerBgColor {
   background: rgb(246, 169, 12);
 }
 
 @media (max-width: 61.99875em) {
-  .header__home {
+  .header {
     font-size: 1.25rem;
   }
   .header__links {
     font-size: 1.25rem;
   }
-  .header__season i {
+  .filter__arrow {
     font-size: 1rem;
   }
-  .season__arrow {
-    font-size: 1rem;
+  .filter {
+    font-size: 1.375rem;
   }
 }
 @media (max-width: 47.99875em) {
@@ -405,27 +409,27 @@ h6 {
     display: flex;
     align-items: center;
   }
-  .season {
+  .filter {
     display: flex;
     flex-direction: column;
   }
-  .season__dropdown {
+  .filter__wrapper:hover {
+    color: inherit;
+  }
+  .filter__dropdown {
     position: static;
     width: 100%;
   }
-  .season__arrow {
+  .filter__arrow {
     font-size: 0.875rem;
   }
-  .season__dropdown-link {
+  .filter__dropdown-link {
     font-size: 1rem;
   }
 }
 @media (max-width: 29.99875em) {
   .header__dropdown-menu {
     width: 90%;
-  }
-  .season__dropdown-link {
-    font-size: 0.875rem;
   }
 }
 .main {
@@ -780,8 +784,7 @@ h6 {
     margin-left: calc(0.0000000625rem + 2.1874999375 * (100vw - 20rem) / 81.875);
   }
 }
-
-#bene td strong {
+.factions__faction strong {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1020,8 +1023,11 @@ h6 {
     font-size: 0.75rem;
     max-width: 18.75rem;
   }
-  .factions__faction img {
-    display: none;
+  .rating__tbody tr {
+    height: 2.5625rem;
+  }
+  .factions__faction strong {
+    width: 0;
   }
   .modal__faction strong {
     display: none;

@@ -1,9 +1,14 @@
 const DOM = {
     playerData: document.getElementById('playerData'),
-    navBar: document.getElementById('navbar'),
+    header: document.getElementById('header'),
     toggleBtn: document.querySelector('.header__toggle_btn'),
     toggleBtnIcon: document.querySelector('.header__toggle_btn i'),
     dropDownMenu: document.querySelector('.header__dropdown-menu'),
+
+    toggleFilter: document.querySelector('.filter__wrapper'),
+    toggleFilterIcon: document.querySelector('.filter__arrow'),
+    filterList: document.querySelector('.filter__list'),
+
     ratingTables: document.querySelectorAll('.table'),
     ratingTheads: document.querySelectorAll('.thead'),
     ratingTbodies: document.querySelectorAll('.tbody'),

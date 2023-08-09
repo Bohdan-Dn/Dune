@@ -1,13 +1,17 @@
 .header {
+    display: flex;
+    align-items: center;
+    flex: 1 0 auto;
+    padding: rem(0) rem(20) rem(0) rem(20);
+    height: rem(50);
+    position: fixed;
+    display: flex;
+    z-index: 999;
+    width: 100%;
+    justify-content: space-between;
 
-    &__navbar {
-        padding: rem(0) rem(20) rem(0) rem(20);
-        height: rem(50);
-        position: fixed;
-        display: flex;
-        z-index: 999;
-        width: 100%;
-        justify-content: space-between;
+    &__logo img {
+        max-width: 35px;
     }
 
     &__navbar a:hover {
@@ -18,13 +22,6 @@
         color: #ae0c0c;
     }
 
-    &__home {
-        display: flex;
-        align-items: center;
-        flex: 1 0 auto;
-        font-size: rem(24);
-    }
-
     &__links {
         display: flex;
         align-items: center;
@@ -33,73 +30,75 @@
         font-size: rem(24);
     }
 
-    &__season {
-        cursor: pointer;
-    }
-
-    &__season i {
-        font-size: rem(20);
-    }
-
     &__toggle_btn {
         font-size: rem(24);
         cursor: pointer;
         display: none;
     }
+
+    &__toggle_btn i {
+        min-width: rem(24);
+    }
 }
 
-.season {
+.filter {
+    font-size: rem(24);
+    cursor: pointer;
+    position: relative;
 
-    &__link {
-        cursor: pointer;
-    }
-
-    &__arrow {
-        font-size: rem(20);
-        transition: transform .3s ease-out;
-    }
-
-    &__dropdown {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height .4s ease-out;
-        position: absolute;
-        top: rem(50);
+    &__wrapper {
         display: flex;
         align-items: center;
-        gap: rem(15);
-        flex-direction: column;
-        min-width: rem(200);
-        background: lighten($color: rgba(246, 169, 12, 1), $amount: 4);
+        gap: rem(7);
+        transition: color .3s linear;
     }
 
-    &__dropdown-link:first-child {
-        padding-top: rem(15);
-    }
-
-    &__dropdown-link:last-child {
-        padding-bottom: rem(15);
-    }
-
-    &__dropdown-link {
-        cursor: pointer;
-        font-size: rem(20);
-        transition: color .2s linear;
-    }
-
-    &__dropdown-link:hover {
+    &__wrapper:hover {
         color: #ae0c0c;
     }
-}
 
-.season:hover .season__dropdown {
-    max-height: 1000px;
-    transition: max-height .4s ease-in;
-}
+    &__calendar,
+    &__arrow {
+        font-size: rem(20);
+    }
 
-.season:hover .season__arrow {
-    transform: rotate(180deg);
-    transition: transform .3s ease-in;
+    &__list {
+        position: absolute;
+        top: rem(36);
+        left: -50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: rem(10);
+        width: rem(200);
+        height: rem(0);
+        background: rgba(246, 169, 12, 0.9);
+        backdrop-filter: blur(5px);
+        border-radius: rem(10);
+        overflow: hidden;
+        transition: height .3s ease;
+    }
+
+    &__list.open {
+        height: rem(130);
+    }
+
+    &__item:first-child {
+        margin-top: rem(15);
+    }
+
+    &__item:last-child {
+        margin-bottom: rem(15);
+    }
+
+    &__item {
+        transition: color .3s linear;
+    }
+
+    &__item:hover {
+        color: #ae0c0c;
+    }
 }
 
 // DROPDOWN MENU
@@ -114,12 +113,13 @@
         backdrop-filter: blur(5px);
         border-radius: rem(10);
         overflow: hidden;
-        transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: max-height .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
     &__dropdown-menu.open {
         max-height: rem(500);
     }
+
 
     &__dropdown-menu li {
         display: flex;
@@ -139,29 +139,28 @@
     }
 }
 
-.navBarBgColor {
+.headerBgColor {
     background: rgba(246, 169, 12);
 }
 
 // RESPONSIVE DESING
 @media(max-width: $tablet) {
     .header {
-        &__home {
-            font-size: rem(20);
-        }
+        font-size: rem(20);
 
         &__links {
             font-size: rem(20);
         }
-
-        &__season i {
-            font-size: rem(16);
-        }
     }
 
-    .season__arrow {
+    .filter__arrow {
         font-size: rem(16);
     }
+
+    .filter {
+        font-size: rem(22);
+    }
+
 }
 
 @media(max-width: $mobile) {
@@ -178,9 +177,13 @@
         }
     }
 
-    .season {
+    .filter {
         display: flex;
         flex-direction: column;
+
+        &__wrapper:hover {
+            color: inherit;
+        }
 
         &__dropdown {
             position: static;
@@ -201,12 +204,6 @@
     .header {
         &__dropdown-menu {
             width: 90%;
-        }
-    }
-
-    .season {
-        &__dropdown-link {
-            font-size: rem(14);
         }
     }
 }

@@ -1,25 +1,38 @@
-function initializeDropdown(dropdownToggle, dropdownMenu, toggleBtnIcon) {
+function initializeDropdown(dropdownToggle, dropdownMenu, toggleBtnIcon, closeBtnIconClass, navbarSelector) {
     dropdownToggle.onclick = function () {
         dropdownMenu.classList.toggle('open');
-        const isOpen = dropdownMenu.classList.contains('open');
-        toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        toggleBtnIcon.classList.toggle(closeBtnIconClass);
     };
 
-    dropdownMenu.onclick = function () {
+    function closeDropdown() {
         dropdownMenu.classList.remove('open');
-        toggleBtnIcon.classList = 'fa-solid fa-bars';
-    };
+        toggleBtnIcon.classList.remove(closeBtnIconClass);
+    }
 
     function closePopupOutsideClick(event) {
         const targetElement = event.target;
-        if (!targetElement.closest('.header__navbar')) {
-            dropdownMenu.classList.remove('open');
-            toggleBtnIcon.classList = 'fa-solid fa-bars';
+        if (!targetElement.closest(navbarSelector)) {
+            closeDropdown();
         }
     }
 
+    dropdownMenu.onclick = closeDropdown;
     document.addEventListener('click', closePopupOutsideClick);
-};
+}
 
-initializeDropdown(DOM.toggleBtn, DOM.dropDownMenu, DOM.toggleBtnIcon);
+initializeDropdown(
+    DOM.toggleBtn,
+    DOM.dropDownMenu,
+    DOM.toggleBtnIcon,
+    'fa-xmark',
+    '.header__navbar',
+);
+
+initializeDropdown(
+    DOM.toggleFilter,
+    DOM.filterList,
+    DOM.toggleFilterIcon,
+    'fa-sort-up',
+    '.header__filter',
+);
 

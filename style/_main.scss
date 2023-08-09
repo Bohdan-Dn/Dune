@@ -256,12 +256,12 @@
         @include adaptiveValue('margin-right', 20, 0);
         @include adaptiveValue('margin-left', 35, 0);
     }
-}
 
-#bene td strong {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    &__faction strong {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
 .rules {
@@ -520,8 +520,12 @@
         }
     }
 
-    .factions__faction img {
-        display: none;
+    .rating__tbody tr {
+        height: rem(41);
+    }
+
+    .factions__faction strong {
+        width: 0;
     }
 
     .modal__faction strong {
