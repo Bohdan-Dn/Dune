@@ -4,8 +4,13 @@ const DOM = {
     toggleBtn: document.querySelector('.header__toggle_btn'),
     toggleBtnIcon: document.querySelector('.header__toggle_btn i'),
     dropDownMenu: document.querySelector('.header__dropdown-menu'),
+    headerFilterSeason: document.getElementById('headerFilterSeason'),
+
+    ratingTitle: document.querySelector('.rating__title'),
+    ratingSubtitle: document.querySelector('.rating__subtitle'),
 
     toggleFilter: document.querySelector('.filter__wrapper'),
+    toggleFilterTitle: document.querySelector('.filter__wrapper span'),
     toggleFilterIcon: document.querySelector('.filter__arrow'),
     filterList: document.querySelector('.filter__list'),
 

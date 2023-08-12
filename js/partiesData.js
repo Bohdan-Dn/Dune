@@ -323,21 +323,30 @@ const parties = [
     },
 ];
 
-const startFirstSeasonDate = '2023-05-01';
-const endFirstSeasonDate = '2023-06-30';
+const seasons = [
+    { start: '2023-05-01', end: '2023-08-31' },
+    { start: '2023-09-01', end: '2023-12-31' },
+];
 
+function filteredSeasonParties(parties, seasonIndex) {
+    const start = new Date(seasons[seasonIndex].start);
+    const end = new Date(seasons[seasonIndex].end);
 
-function filteredSeasonParties(parties, startDate, endDate) {
-    const start = new Date(startDate);
-    const end = new Date(endDate);
-
-    filteredParties = parties.filter((party) => {
+    const filteredParties = parties.filter((party) => {
         const partyDate = new Date(party.date);
         return partyDate >= start && partyDate <= end;
-    })
+    });
 
     return filteredParties;
-};
+}
 
-console.log(filteredSeasonParties(parties, startFirstSeasonDate, endFirstSeasonDate));
+const allParties = parties;
+const firstSeasonParties = filteredSeasonParties(parties, 0);
+const secondSeasonParties = filteredSeasonParties(parties, 1);
+
+
+
+
+
+
 
