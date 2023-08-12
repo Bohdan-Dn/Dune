@@ -31,7 +31,7 @@ function addPartiesRow(player) {
         document.createElement('td'),
         document.createElement('td'),
     ];
-    cells[0].innerHTML = `<strong class="parties__player" onclick="openModal(event)">${player.player}</strong>`;
+    cells[0].innerHTML = `<strong class="parties__player">${player.player}</strong>`;
     cells[1].textContent = player.faction;
     cells[2].textContent = player.points;
     cells.forEach(function (cell) {

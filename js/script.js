@@ -1,5 +1,5 @@
 // SEASON
-function addPlayerRowRating(player) {
+function addPlayerRowRating(player, obj) {
     let row = document.createElement('tr');
     let cells = [
         document.createElement('td'),
@@ -9,17 +9,41 @@ function addPlayerRowRating(player) {
         document.createElement('td'),
         document.createElement('td'),
     ];
-    cells[0].innerHTML = `<strong data-modal-target onclick ="openModal(event)">${player}</strong>`;
-    cells[1].textContent = getPlayerTotalGames(player);
-    cells[2].textContent = getPlayerTotalWins(player);
-    cells[3].textContent = getWinRate(getPlayerTotalGames(player), getPlayerTotalWins(player));
-    cells[4].textContent = getPlayerTotalPoints(player);
-    cells[5].textContent = getAveragePoint(getPlayerTotalPoints(player), getPlayerTotalGames(player));
+
+    let playerLink = document.createElement('strong');
+    playerLink.textContent = player;
+    playerLink.setAttribute('data-modal-target', '');
+    playerLink.setAttribute('data-obj', JSON.stringify(obj));
+    playerLink.addEventListener('click', openModal);
+
+    cells[0].appendChild(playerLink);
+    cells[1].textContent = getPlayerTotalGames(player, obj);
+    cells[2].textContent = getPlayerTotalWins(player, obj);
+    cells[3].textContent = getWinRate(getPlayerTotalGames(player, obj), getPlayerTotalWins(player, obj));
+    cells[4].textContent = getPlayerTotalPoints(player, obj);
+    cells[5].textContent = getAveragePoint(getPlayerTotalPoints(player, obj), getPlayerTotalGames(player, obj));
+
     cells.forEach(function (cell) {
         row.appendChild(cell);
     });
     DOM.playerData.appendChild(row);
 };
+
+function addPlayerRowsRanting(obj) {
+    const playersSet = obj.reduce((set, party) => {
+        const players = party.players;
+        players.forEach((player) => {
+            set.add(player.player);
+        });
+        return set;
+    }, new Set());
+
+    const uniquePlayers = Array.from(playersSet);
+    uniquePlayers.forEach((player) => {
+        addPlayerRowRating(player, obj);
+    });
+};
+
 
 function getAveragePoint(a, b) {
     if (b == 0) {
@@ -46,25 +70,9 @@ function getWinRate(a, b) {
     };
 };
 
-function addPlayerRowsRanting(obj) {
-    const playersSet = obj.reduce((set, party) => {
-        const players = party.players;
-        players.forEach((player) => {
-            set.add(player.player);
-        });
-        return set;
-    }, new Set());
-
-    const uniquePlayers = Array.from(playersSet);
-    uniquePlayers.forEach((player) => {
-        addPlayerRowRating(player);
-    });
-};
-addPlayerRowsRanting(parties);
-
-function getPlayerTotalGames(player) {
+function getPlayerTotalGames(player, obj) {
     let totalGames = 0;
-    parties.forEach((party) => {
+    obj.forEach((party) => {
         party.players.forEach((person) => {
             if (person.player === player) {
                 totalGames += 1;
@@ -74,9 +82,9 @@ function getPlayerTotalGames(player) {
     return totalGames;
 }
 
-function getPlayerTotalWins(player) {
+function getPlayerTotalWins(player, obj) {
     let totalWins = 0;
-    parties.forEach((party) => {
+    obj.forEach((party) => {
         if (party.winners.includes(player)) {
             totalWins += 1;
         }
@@ -84,9 +92,9 @@ function getPlayerTotalWins(player) {
     return totalWins;
 }
 
-function getPlayerTotalPoints(player) {
+function getPlayerTotalPoints(player, obj) {
     let totalPoints = 0;
-    parties.forEach((party) => {
+    obj.forEach((party) => {
         party.players.forEach((person) => {
             if (person.player === player) {
                 totalPoints += person.points;
@@ -148,12 +156,13 @@ function getFactionTotalPoints(factionName) {
 
 // MODAL
 function openModal(event) {
-    if (DOM.modal == null) return;
+    if (DOM.modal === null) return;
+    const obj = JSON.parse(event.target.getAttribute('data-obj'));
     DOM.modal.classList.add('active');
     DOM.overlay.classList.add('active');
-    addDataToModal(event);
+    addDataToModal(event, obj); //
     document.body.classList.add('modal-open');
-};
+}
 
 function closeModal() {
     if (DOM.modal == null) return;
@@ -162,16 +171,16 @@ function closeModal() {
     document.body.classList.remove('modal-open');
 }
 
-function addDataToModal(event) {
+function addDataToModal(event, obj) {
     let player = event.target.innerHTML
     let elements = DOM.modalBody.children;
     DOM.modalTitle.innerHTML = event.target.innerHTML;
-    DOM.modalBan.innerHTML = 'Next game ban: ' + getPlayerLastFactions(event.target.innerHTML);
+    DOM.modalBan.innerHTML = 'Next game ban: ' + getPlayerLastFactions(event.target.innerHTML, obj);
     for (let i = 0; i < elements.length; i++) {
         const element = elements[i];
-        let games = countGamesForPlayerAndFaction(player, element.id);
-        let victories = countWinsForPlayerAndFaction(player, element.id);
-        let points = countPointsForPlayerAndFaction(player, element.id);
+        let games = countGamesForPlayerAndFaction(player, element.id, obj);
+        let victories = countWinsForPlayerAndFaction(player, element.id, obj);
+        let points = countPointsForPlayerAndFaction(player, element.id, obj);
         element.children[1].innerHTML = games;
         element.children[2].innerHTML = victories;
         element.children[3].innerHTML = getWinRate(games, victories);
@@ -180,10 +189,10 @@ function addDataToModal(event) {
     };
 };
 
-function countGamesForPlayerAndFaction(player, faction) {
+function countGamesForPlayerAndFaction(player, faction, obj) {
     let count = 0;
-    for (let i = 0; i < parties.length; i++) {
-        const party = parties[i];
+    for (let i = 0; i < obj.length; i++) {
+        const party = obj[i];
         const players = party.players;
         for (let j = 0; j < players.length; j++) {
             const currentPlayer = players[j];
@@ -195,10 +204,10 @@ function countGamesForPlayerAndFaction(player, faction) {
     return count;
 };
 
-function countWinsForPlayerAndFaction(player, faction) {
+function countWinsForPlayerAndFaction(player, faction, obj) {
     let count = 0;
-    for (let i = 0; i < parties.length; i++) {
-        const party = parties[i];
+    for (let i = 0; i < obj.length; i++) {
+        const party = obj[i];
         const players = party.players;
         const winners = party.winners;
         for (let j = 0; j < players.length; j++) {
@@ -211,10 +220,10 @@ function countWinsForPlayerAndFaction(player, faction) {
     return count;
 };
 
-function countPointsForPlayerAndFaction(player, faction) {
+function countPointsForPlayerAndFaction(player, faction, obj) {
     let totalPoints = 0;
-    for (let i = 0; i < parties.length; i++) {
-        const party = parties[i];
+    for (let i = 0; i < obj.length; i++) {
+        const party = obj[i];
         const players = party.players;
         for (let j = 0; j < players.length; j++) {
             const currentPlayer = players[j];
@@ -226,8 +235,8 @@ function countPointsForPlayerAndFaction(player, faction) {
     return totalPoints;
 };
 
-function getPlayerLastFactions(playerName) {
-    const playerParties = parties.filter((party) => {
+function getPlayerLastFactions(playerName, obj) {
+    const playerParties = obj.filter((party) => {
         const playerIndex = party.players.findIndex(
             (player) => player.player === playerName
         );
@@ -250,3 +259,47 @@ function getPlayerLastFactions(playerName) {
         return [];
     }
 };
+
+// FILTER SEASONS
+function getSeason(seasonsList) {
+    const filterItems = seasonsList.querySelectorAll('.filter__item');
+    filterItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            const content = item.textContent;
+
+            switch (content) {
+                case 'First season':
+                    currentParties = firstSeasonParties;
+                    DOM.ratingTitle.innerHTML = 'The first season rating';
+                    DOM.ratingSubtitle.innerHTML = 'May 01, 2023 to august 31, 2023: a season of excitement and adventures!';
+                    DOM.toggleFilterTitle.innerHTML = 'First season';
+                    break;
+                case 'Second season':
+                    currentParties = secondSeasonParties;
+                    DOM.ratingTitle.innerHTML = 'The second season rating';
+                    DOM.ratingSubtitle.innerHTML = 'Coming soon!';
+                    DOM.toggleFilterTitle.innerHTML = 'Second season';
+                    break;
+                default:
+                    currentParties = allParties;
+                    DOM.ratingTitle.innerHTML = 'All games';
+                    DOM.ratingSubtitle.innerHTML = '';
+                    DOM.toggleFilterTitle.innerHTML = 'All games';
+            }
+            DOM.playerData.innerHTML = '';
+            addPlayerRowsRanting(currentParties);
+        });
+    });
+};
+addPlayerRowsRanting(firstSeasonParties);
+getSeason(DOM.headerFilterSeason);
+
+
+
+
+
+
+
+
+
+

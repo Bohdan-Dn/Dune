@@ -1,12 +1,12 @@
-function changeNavBg() {
+function changeHeaderBg() {
     let scrollValue = window.scrollY;
     if (scrollValue < 100) {
-        DOM.navBar.classList.remove('navBarBgColor');
+        DOM.header.classList.remove('headerBgColor');
     } else {
-        DOM.navBar.classList.add('navBarBgColor');
+        DOM.header.classList.add('headerBgColor');
     }
 };
-window.addEventListener('scroll', changeNavBg);
+window.addEventListener('scroll', changeHeaderBg);
 
 function addNavLinkColor() {
     DOM.sections.forEach(sec => {

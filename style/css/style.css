@@ -87,6 +87,7 @@ h6 {
   overflow: hidden;
   touch-action: none;
 }
+
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -139,6 +140,7 @@ h6 {
 
 .title {
   font-size: 2.125rem;
+  line-height: 1;
 }
 
 .result {
@@ -252,7 +254,10 @@ h6 {
     top: 1rem;
   }
 }
-.header__navbar {
+.header {
+  display: flex;
+  align-items: center;
+  flex: 1 0 auto;
   padding: 0rem 1.25rem 0rem 1.25rem;
   height: 3.125rem;
   position: fixed;
@@ -261,17 +266,14 @@ h6 {
   width: 100%;
   justify-content: space-between;
 }
+.header__logo img {
+  max-width: 35px;
+}
 .header__navbar a:hover {
   color: #ae0c0c;
 }
 .header__navbar a.active {
   color: #ae0c0c;
-}
-.header__home {
-  display: flex;
-  align-items: center;
-  flex: 1 0 auto;
-  font-size: 1.5rem;
 }
 .header__links {
   display: flex;
@@ -294,22 +296,76 @@ h6 {
   cursor: pointer;
   display: none;
 }
+.header__toggle_btn i {
+  min-width: 1.5rem;
+}
 
-.header__dropdown-menu {
+.filter {
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: relative;
+}
+.filter__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.4375rem;
+  transition: color 0.3s linear;
+}
+.filter__wrapper:hover {
+  color: #ae0c0c;
+}
+.filter__calendar, .filter__arrow {
+  font-size: 1.25rem;
+}
+.filter__list {
   position: absolute;
-  right: 1.25rem;
-  top: 3.125rem;
-  width: 15.625rem;
+  top: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  width: 12.5rem;
   height: 0rem;
   background: rgba(246, 169, 12, 0.9);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   border-radius: 0.625rem;
   overflow: hidden;
-  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: height 0.3s ease;
+}
+.filter__list.open {
+  height: 8.125rem;
+}
+.filter__item:first-child {
+  margin-top: 0.9375rem;
+}
+.filter__item:last-child {
+  margin-bottom: 0.9375rem;
+}
+.filter__item {
+  transition: color 0.3s linear;
+  font-size: 1.375rem;
+}
+.filter__item:hover {
+  color: #ae0c0c;
+}
+
+.header__dropdown-menu {
+  position: absolute;
+  right: 1.25rem;
+  top: 3.125rem;
+  width: 15.625rem;
+  max-height: 0rem;
+  background: rgba(246, 169, 12, 0.9);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 0.625rem;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .header__dropdown-menu.open {
-  height: 15rem;
+  max-height: 31.25rem;
 }
 .header__dropdown-menu li {
   display: flex;
@@ -322,17 +378,26 @@ h6 {
   padding-top: 0.875rem;
   padding-bottom: 0.875rem;
 }
+.header__dropdown-menu li i {
+  font-size: 1rem;
+}
 
-.navBarBgColor {
+.headerBgColor {
   background: rgb(246, 169, 12);
 }
 
 @media (max-width: 61.99875em) {
-  .header__home {
+  .header {
     font-size: 1.25rem;
   }
   .header__links {
     font-size: 1.25rem;
+  }
+  .filter__arrow {
+    font-size: 1rem;
+  }
+  .filter {
+    font-size: 1.375rem;
   }
 }
 @media (max-width: 47.99875em) {
@@ -344,11 +409,27 @@ h6 {
     display: flex;
     align-items: center;
   }
+  .filter {
+    display: flex;
+    flex-direction: column;
+  }
+  .filter__wrapper:hover {
+    color: inherit;
+  }
+  .filter__dropdown {
+    position: static;
+    width: 100%;
+  }
+  .filter__arrow {
+    font-size: 0.875rem;
+  }
+  .filter__dropdown-link {
+    font-size: 1rem;
+  }
 }
 @media (max-width: 29.99875em) {
   .header__dropdown-menu {
-    left: 2.25rem;
-    width: unset;
+    width: 90%;
   }
 }
 .main {
@@ -446,6 +527,24 @@ h6 {
   .rating__header {
     gap: calc(0.625rem + 0.625 * (100vw - 20rem) / 81.875);
   }
+}
+.rating__dropdown {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.25rem;
+  line-height: 1.3333333333;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.rating__dropdown:hover {
+  color: rgb(6, 69, 173);
+  color: #032863;
+}
+.rating__dropdown i::before {
+  font-size: 1.5rem;
+}
+.rating__dropdown-menu {
+  display: none;
 }
 .rating__subtitle {
   text-align: center;
@@ -569,10 +668,6 @@ h6 {
 .parties__player {
   transition: color 0.3s linear;
 }
-.parties__player:hover {
-  cursor: pointer;
-  color: rgb(6, 69, 173);
-}
 .parties__button {
   color: #000000;
   height: 40px;
@@ -685,8 +780,7 @@ h6 {
     margin-left: calc(0.0000000625rem + 2.1874999375 * (100vw - 20rem) / 81.875);
   }
 }
-
-#bene td strong {
+.factions__faction strong {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -925,8 +1019,11 @@ h6 {
     font-size: 0.75rem;
     max-width: 18.75rem;
   }
-  .factions__faction img {
-    display: none;
+  .rating__tbody tr {
+    height: 2.5625rem;
+  }
+  .factions__faction strong {
+    width: 0;
   }
   .modal__faction strong {
     display: none;
