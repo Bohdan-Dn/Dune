@@ -349,6 +349,20 @@ const parties = [
         winners: ['Ivan'],
         description: 'Solo victory in round 1.',
     },
+    {
+        date: '2023-08-14',
+        partyNumber: 26,
+        players: [
+            { player: 'Andriy', faction: 'Harkonnen', points: 0 },
+            { player: 'Ivan', faction: 'Richese', points: 0 },
+            { player: 'Denis Junior', faction: 'Bene', points: 2 },
+            { player: 'Scytale', faction: 'Tleilaxu', points: 2 },
+            { player: 'Nazar', faction: 'Atreides', points: 0 },
+            { player: 'Misha', faction: 'Emperor', points: 0 }
+        ],
+        winners: ['Scytale', 'Denis Junior'],
+        description: 'Victory by tie-breake.',
+    },
 ];
 
 
