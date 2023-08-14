@@ -335,6 +335,20 @@ const parties = [
         winners: ['Bohdan', 'Mr Yuri'],
         description: 'Victory by Fremen ability in round 10.',
     },
+    {
+        date: '2023-08-14',
+        partyNumber: 25,
+        players: [
+            { player: 'Andriy', faction: 'Richese', points: 0 },
+            { player: 'Ivan', faction: 'Bene', points: 3 },
+            { player: 'Denis Junior', faction: 'Emperor', points: 0 },
+            { player: 'Scytale', faction: 'Harkonnen', points: 0 },
+            { player: 'Nazar', faction: 'Ixian', points: 0 },
+            { player: 'Misha', faction: 'Tleilaxu', points: 0 }
+        ],
+        winners: ['Ivan'],
+        description: 'Solo victory in round 1.',
+    },
 ];
 
 
