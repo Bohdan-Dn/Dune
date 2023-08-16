@@ -363,6 +363,20 @@ const parties = [
         winners: ['Scytale', 'Denis Junior'],
         description: 'Victory by tie-breake.',
     },
+    {
+        date: '2023-08-16',
+        partyNumber: 27,
+        players: [
+            { player: 'Andriy', faction: 'Tleilaxu', points: 0 },
+            { player: 'Ivan', faction: 'Emperor', points: 2 },
+            { player: 'Oleg Old', faction: 'Harkonnen', points: 0 },
+            { player: 'Murloc', faction: 'Ixian', points: 0 },
+            { player: 'Mr Yuri', faction: 'Bene', points: 2 },
+            { player: 'Igor', faction: 'Fremen', points: 0 }
+        ],
+        winners: ['Ivan', 'Mr Yuri'],
+        description: 'Victory of the alliance in round 3.',
+    },
 ];
 
 
