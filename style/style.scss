@@ -93,6 +93,10 @@ body {
 
     // Чутлива
     [class*="__container"] {
+        @include adaptiveValue('gap', 40, 20);
+        @include adaptiveValue('padding-top', 60, 20);
+        @include adaptiveValue('padding-bottom', 80, 10);
+
         @if ($maxWidthContainer>0) {
             max-width: rem($maxWidthContainer);
             box-sizing: content-box;

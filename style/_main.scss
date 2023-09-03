@@ -41,9 +41,6 @@
         flex-direction: column;
         align-items: center;
         height: 100%;
-        @include adaptiveValue('gap', 90, 30);
-        @include adaptiveValue('padding-top', 105, 60);
-        @include adaptiveValue('padding-bottom', 120, 40);
     }
 
     &__header {
@@ -90,6 +87,31 @@
     }
 }
 
+.winners {
+
+    &__title {
+        text-align: center;
+        @include adaptiveValue('font-size', 38, 20);
+        @include adaptiveValue('margin-bottom', 20, 10);
+    }
+
+    &__list {
+        display: flex;
+        @include adaptiveValue('gap', 40, 10);
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: rem(7);
+        @include adaptiveValue('font-size', 32, 16);
+    }
+
+    &__item img {
+        @include adaptiveValue('height', 50, 20);
+    }
+}
+
 .parties {
     width: 100%;
     height: 100%;
@@ -106,9 +128,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        @include adaptiveValue('gap', 50, 10);
-        @include adaptiveValue('padding-top', 90, 60);
-        @include adaptiveValue('padding-bottom', 110, 40);
     }
 
     &__title {
@@ -230,9 +249,6 @@
         flex-direction: column;
         align-items: center;
         height: 100%;
-        @include adaptiveValue('gap', 90, 30);
-        @include adaptiveValue('padding-top', 105, 60);
-        @include adaptiveValue('padding-bottom', 120, 40);
     }
 
     &__header {
@@ -269,14 +285,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: rem(110) rem(0) rem(110) rem(0);
 
     &__container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        @include adaptiveValue('gap', 50, 20)
     }
 
     &__title {
@@ -327,50 +341,6 @@
 
     &__block-list li a:hover {
         color: rgb(6, 69, 173);
-    }
-}
-
-.contacts {
-    height: rem(70);
-    display: flex;
-    align-items: center;
-
-    &__container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        font-size: rem(26);
-    }
-
-    &__list {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: rem(25);
-        flex-wrap: wrap;
-    }
-
-    &__list li a {
-        cursor: pointer;
-        display: inline-block;
-        transition: all 0.3s linear;
-    }
-
-    &__list a:hover {
-        color: rgb(6, 69, 173);
-        transform: translateY(-10px);
-    }
-
-    &__list li a ion-icon {
-        margin-right: rem(5);
-        font-size: rem(32);
-    }
-
-    &__created {
-        font-size: rem(18);
-        font-style: italic;
     }
 }
 

@@ -6,6 +6,7 @@ const DOM = {
     dropDownMenu: document.querySelector('.header__dropdown-menu'),
     headerFilterSeason: document.getElementById('headerFilterSeason'),
 
+    ratingHeader: document.querySelector('.rating__header'),
     ratingTitle: document.querySelector('.rating__title'),
     ratingSubtitle: document.querySelector('.rating__subtitle'),
 

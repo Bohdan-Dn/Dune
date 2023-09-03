@@ -1,0 +1,46 @@
+.contacts {
+    height: rem(70);
+    display: flex;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-size: rem(26);
+        @include adaptiveValue('gap', 20, 10);
+        @include adaptiveValue('padding-top', 20, 10);
+        @include adaptiveValue('padding-bottom', 20, 10);
+    }
+
+    &__list {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include adaptiveValue('gap', 25, 10);
+        flex-wrap: wrap;
+    }
+
+    &__list li a {
+        cursor: pointer;
+        display: inline-block;
+        transition: all 0.3s linear;
+    }
+
+    &__list a:hover {
+        color: rgb(6, 69, 173);
+        transform: translateY(-10px);
+    }
+
+    &__list li a ion-icon {
+        margin-right: rem(5);
+        font-size: rem(32);
+    }
+
+    &__created {
+        font-size: rem(18);
+        font-style: italic;
+    }
+}

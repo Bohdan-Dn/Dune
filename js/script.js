@@ -271,20 +271,32 @@ function getSeason(seasonsList) {
                 case 'First season':
                     currentParties = firstSeasonParties;
                     DOM.ratingTitle.innerHTML = 'The first season rating';
-                    DOM.ratingSubtitle.innerHTML = 'May 01, 2023 to august 31, 2023: a season of excitement and adventures!';
+                    DOM.ratingSubtitle.innerHTML = 'May 01, 2023 to august 31, 2023';
                     DOM.toggleFilterTitle.innerHTML = 'First season';
+
+                    addWinnersSection(FirstSeasonWinnersNames);
                     break;
                 case 'Second season':
                     currentParties = secondSeasonParties;
                     DOM.ratingTitle.innerHTML = 'The second season rating';
                     DOM.ratingSubtitle.innerHTML = 'Coming soon!';
                     DOM.toggleFilterTitle.innerHTML = 'Second season';
+
+                    const existingWinnersSection = document.querySelector('.rating__winners');
+                    if (existingWinnersSection) {
+                        existingWinnersSection.remove();
+                    }
                     break;
                 default:
                     currentParties = allParties;
                     DOM.ratingTitle.innerHTML = 'All games';
                     DOM.ratingSubtitle.innerHTML = '';
                     DOM.toggleFilterTitle.innerHTML = 'All games';
+
+                    const existingWinnersSectionDefault = document.querySelector('.rating__winners');
+                    if (existingWinnersSectionDefault) {
+                        existingWinnersSectionDefault.remove();
+                    }
             }
             DOM.playerData.innerHTML = '';
             addPlayerRowsRanting(currentParties);
@@ -294,7 +306,35 @@ function getSeason(seasonsList) {
 addPlayerRowsRanting(firstSeasonParties);
 getSeason(DOM.headerFilterSeason);
 
+// ADD WINNERS SECTION
+function addWinnersSection(winnersNames) {
+    const existingWinnersSection = document.querySelector('.rating__winners');
 
+    if (!existingWinnersSection) {
+        const ratingHeader = document.querySelector('.rating__header');
+        let winnersHTML = `
+            <div class="rating__winners winners">
+                <h4 class="winners__title">Winners</h4>
+                <ul class="winners__list">
+        `;
+        winnersNames.forEach((name, index) => {
+            const place = index + 1;
+            const medalImage = `images/${place}-place-medal-svgrepo-com.svg`;
+
+            winnersHTML += `
+                <li class="winners__item"><img src="${medalImage}" alt="">${name}</li>
+            `;
+        });
+        winnersHTML += `
+                </ul>
+            </div>
+        `;
+        ratingHeader.insertAdjacentHTML('afterend', winnersHTML);
+    }
+}
+
+const FirstSeasonWinnersNames = ['Bohdan', 'Ivan', 'Igor'];
+addWinnersSection(FirstSeasonWinnersNames);
 
 
 

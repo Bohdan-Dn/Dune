@@ -23,7 +23,7 @@
 }
 
 .title {
-    font-size: rem(34);
+    @include adaptiveValue('font-size', 42, 24);
     line-height: math.div(1, 1);
 }
 
