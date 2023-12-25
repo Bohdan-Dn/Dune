@@ -303,7 +303,7 @@ function getSeason(seasonsList) {
         });
     });
 };
-addPlayerRowsRanting(firstSeasonParties);
+addPlayerRowsRanting(secondSeasonParties);
 getSeason(DOM.headerFilterSeason);
 
 // ADD WINNERS SECTION
@@ -334,7 +334,7 @@ function addWinnersSection(winnersNames) {
 }
 
 const FirstSeasonWinnersNames = ['Bohdan', 'Ivan', 'Igor'];
-addWinnersSection(FirstSeasonWinnersNames);
+//addWinnersSection(FirstSeasonWinnersNames);
 
 
 
