@@ -419,12 +419,26 @@ const parties = [
         winners: ['Igor', 'Denis Junior'],
         description: 'Victory of the alliance in round 5.',
     },
+    {
+        date: '2024-01-03',
+        partyNumber: 31,
+        players: [
+            { player: 'Oleg Old', faction: 'Harkonnen', points: 0 },
+            { player: 'Oleg', faction: 'Guild', points: 0 },
+            { player: 'Sasha', faction: 'Atreides', points: 2 },
+            { player: 'Nazar', faction: 'Bene', points: 2 },
+            { player: 'Mr Yuri', faction: 'Ecaz', points: 0 },
+            { player: 'Misha', faction: 'Tleilaxu', points: 0 }
+        ],
+        winners: ['Nazar', 'Sasha'],
+        description: 'Victory of the alliance in round 6.',
+    },
 ];
 
 
 const seasons = [
     { start: '2023-05-01', end: '2023-08-31' },
-    { start: '2024-01-01', end: '2023-03-31' },
+    { start: '2024-01-01', end: '2024-03-31' },
 ];
 
 function filteredSeasonParties(parties, seasonIndex) {
