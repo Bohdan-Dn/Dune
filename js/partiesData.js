@@ -458,7 +458,7 @@ const parties = [
             { player: 'Mr Yuri', faction: 'Harkonnen', points: 0 },
             { player: 'Misha', faction: 'Bene', points: 0 }
         ],
-        winners: ['Nazar', 'Mr Yuri'],
+        winners: ['Oleg Old', 'Andriy'],
         description: 'Victory of the alliance in round 3.',
     },
 ];
