@@ -470,10 +470,24 @@ const parties = [
             { player: 'Ivan', faction: 'Emperor', points: 0 },
             { player: 'Nazar', faction: 'Fremen', points: 3 },
             { player: 'Mr Yuri', faction: 'Moritani', points: 0 },
-            { player: 'Artem New', faction: 'Bene', points: 0 }
+            { player: 'Artem S.', faction: 'Bene', points: 0 }
         ],
         winners: ['Nazar'],
-        description: 'Solo victory in round 5.',
+        description: 'Solo vi in round 5.',
+    },
+    {
+        date: '2024-01-20',
+        partyNumber: 35,
+        players: [
+            { player: 'Oleg Old', faction: 'Atreides', points: 0 },
+            { player: 'Misha', faction: 'Harkonnen', points: 2 },
+            { player: 'Denis Junior', faction: 'Fremen', points: 0 },
+            { player: 'Igor', faction: 'Guild', points: 0 },
+            { player: 'Mr Yuri', faction: 'Ecaz', points: 2 },
+            { player: 'Artem S.', faction: 'Tleilaxu', points: 0 }
+        ],
+        winners: ['Mr Yuri', 'Misha'],
+        description: 'Victory of the alliance in round 7.',
     },
 ];
 
