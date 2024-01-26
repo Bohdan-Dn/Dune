@@ -489,9 +489,29 @@ const parties = [
         winners: ['Mr Yuri', 'Misha'],
         description: 'Victory of the alliance in round 7.',
     },
+    {
+        date: '2024-01-24',
+        partyNumber: 36,
+        players: [
+            { player: 'Oleg Old', faction: 'Choam', points: 0 },
+            { player: 'Andriy', faction: 'Ixian', points: 3 },
+            { player: 'Denis Junior', faction: 'Ecaz', points: 0 },
+            { player: 'Nazar', faction: 'Emperor', points: 0 },
+            { player: 'Mr Yuri', faction: 'Bene', points: 0 },
+            { player: 'Artem S.', faction: 'Fremen', points: 0 }
+        ],
+        winners: ['Andriy'],
+        description: 'Solo vi in round 3.',
+    },
 ];
 
 
+
+
+
+
+
+//SEASONS
 const seasons = [
     { start: '2023-05-01', end: '2023-08-31' },
     { start: '2024-01-01', end: '2024-03-31' },
