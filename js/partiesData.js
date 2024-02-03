@@ -473,7 +473,7 @@ const parties = [
             { player: 'Artem S.', faction: 'Bene', points: 0 }
         ],
         winners: ['Nazar'],
-        description: 'Solo vi in round 5.',
+        description: 'Solo victory in round 5.',
     },
     {
         date: '2024-01-20',
@@ -501,7 +501,7 @@ const parties = [
             { player: 'Artem S.', faction: 'Fremen', points: 0 }
         ],
         winners: ['Andriy'],
-        description: 'Solo vi in round 3.',
+        description: 'Solo victory in round 3.',
     },
     {
         date: '2024-01-31',
