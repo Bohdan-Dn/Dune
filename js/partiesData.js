@@ -517,6 +517,20 @@ const parties = [
         winners: ['Misha', 'Nazar'],
         description: 'Victory of the alliance in round 9.',
     },
+    {
+        date: '2024-02-29',
+        partyNumber: 38,
+        players: [
+            { player: 'Oleg Old', faction: 'Fremem', points: 0 },
+            { player: 'Andriy', faction: 'Emperor', points: 0 },
+            { player: 'Denis Junior', faction: 'Atreides', points: 0 },
+            { player: 'Nazar', faction: 'Guild', points: 0 },
+            { player: 'Mr Yuri', faction: 'Ixian', points: 2 },
+            { player: 'Artem S.', faction: 'Mpritani', points: 2 }
+        ],
+        winners: ['Artem S.', 'Mr Yuri'],
+        description: 'Victory of the alliance in round 8.',
+    },
 ];
 
 
