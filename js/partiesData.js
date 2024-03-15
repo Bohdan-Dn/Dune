@@ -545,6 +545,20 @@ const parties = [
         winners: ['Oleg', 'Igor'],
         description: 'Victory by Fremen ability in round 10.',
     },
+    {
+        date: '2024-03-13',
+        partyNumber: 40,
+        players: [
+            { player: 'Oleg Old', faction: 'Ecaz', points: 0 },
+            { player: 'Igor', faction: 'Tleilaxu', points: 0 },
+            { player: 'Ivan', faction: 'Harkonnen', points: 0 },
+            { player: 'Nazar', faction: 'Atreides', points: 0 },
+            { player: 'Mr Yuri', faction: 'Fremen', points: 2 },
+            { player: 'Artem S.', faction: 'Choam', points: 2 }
+        ],
+        winners: ['Mr Yuri', 'Artem S.'],
+        description: 'Victory of the alliance in round 9.',
+    },
 ];
 
 
