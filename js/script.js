@@ -271,7 +271,7 @@ function getSeason(seasonsList) {
                 case 'First season':
                     currentParties = firstSeasonParties;
                     DOM.ratingTitle.innerHTML = 'The first season rating';
-                    DOM.ratingSubtitle.innerHTML = 'May 01, 2023 to august 31, 2023';
+                    DOM.ratingSubtitle.innerHTML = 'May 01, 2023 to August 31, 2023';
                     DOM.toggleFilterTitle.innerHTML = 'First season';
 
                     addWinnersSection(FirstSeasonWinnersNames);
@@ -279,7 +279,7 @@ function getSeason(seasonsList) {
                 case 'Second season':
                     currentParties = secondSeasonParties;
                     DOM.ratingTitle.innerHTML = 'The second season rating';
-                    DOM.ratingSubtitle.innerHTML = 'Coming soon!';
+                    DOM.ratingSubtitle.innerHTML = 'January 01, 2024 to April 30, 2024';
                     DOM.toggleFilterTitle.innerHTML = 'Second season';
 
                     const existingWinnersSection = document.querySelector('.rating__winners');
