@@ -584,7 +584,7 @@ const parties = [
 //SEASONS
 const seasons = [
     { start: '2023-05-01', end: '2023-08-31' },
-    { start: '2024-01-01', end: '2024-04-31' },
+    { start: '2024-01-01', end: '2024-04-30' },
 ];
 
 function filteredSeasonParties(parties, seasonIndex) {
