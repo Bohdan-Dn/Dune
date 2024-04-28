@@ -573,6 +573,20 @@ const parties = [
         winners: ['Oleg Old', 'Nazar'],
         description: 'Victory of the alliance in round 4.',
     },
+    {
+        date: '2024-04-27',
+        partyNumber: 42,
+        players: [
+            { player: 'Oleg Old', faction: 'Harkonnen', points: 0 },
+            { player: 'Igor', faction: 'Guild', points: 0 },
+            { player: 'Denis Junior', faction: 'Bene', points: 0 },
+            { player: 'Nazar', faction: 'Richese', points: 2 },
+            { player: 'Misha', faction: 'Tleilaxu', points: 3 },
+            { player: 'Volodymyr', faction: 'Ecaz', points: 2 }
+        ],
+        winners: ['Misha', 'Nazar', 'Volodymyr'],
+        description: 'Victory of the alliance(Ecaz+Richese) and solo(Tleilaxu) in round 9.',
+    },
 ];
 
 
