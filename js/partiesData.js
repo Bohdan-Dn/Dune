@@ -587,6 +587,20 @@ const parties = [
         winners: ['Misha', 'Nazar', 'Volodymyr'],
         description: 'Victory of the alliance(Ecaz+Richese) and solo(Tleilaxu) in round 9.',
     },
+    {
+        date: '2024-09-07',
+        partyNumber: 43,
+        players: [
+            { player: 'Oleg Old', faction: 'Moritani', points: 2 },
+            { player: 'Igor', faction: 'Choam', points: 0 },
+            { player: 'Mr Yuri', faction: 'Harkonnen', points: 0 },
+            { player: 'IgorN', faction: 'Tlailaxu', points: 0 },
+            { player: 'Sasha', faction: 'Atreides', points: 2 },
+            { player: 'Yura', faction: 'Fremen', points: 0 }
+        ],
+        winners: ['Oleg Old', 'Sasha'],
+        description: 'Victory of the alliance in round 3.',
+    },
 ];
 
 
@@ -599,6 +613,7 @@ const parties = [
 const seasons = [
     { start: '2023-05-01', end: '2023-08-31' },
     { start: '2024-01-01', end: '2024-04-30' },
+    { start: '2024-09-01', end: '2024-12-31' },
 ];
 
 function filteredSeasonParties(parties, seasonIndex) {
@@ -616,3 +631,4 @@ function filteredSeasonParties(parties, seasonIndex) {
 const allParties = parties;
 const firstSeasonParties = filteredSeasonParties(parties, 0);
 const secondSeasonParties = filteredSeasonParties(parties, 1);
+const thirdSeasonParties = filteredSeasonParties(parties, 2);
