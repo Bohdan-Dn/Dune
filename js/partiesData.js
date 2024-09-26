@@ -628,7 +628,21 @@ const parties = [
         ],
         winners: ['Denis Junior', 'Max'],
         description: 'Victory of the alliance in round 5.',
+    }, {
+        date: '2024-09-25',
+        partyNumber: 46,
+        players: [
+            { player: 'Denis Junior', faction: 'Emperor', points: 0.5 },
+            { player: 'Artem S.', faction: 'Ixian', points: 0 },
+            { player: 'Mr Yuri', faction: 'Atreides', points: 0 },
+            { player: 'Igor', faction: 'Harkonnen', points: 0 },
+            { player: 'Oleg Old', faction: 'Guild', points: 0.5 },
+            { player: 'Yura', faction: 'Bene', points: 0 }
+        ],
+        winners: ['Denis Junior', 'Oleg Old'],
+        description: 'Victory by Guild ability.',
     },
+
 ];
 
 
