@@ -690,7 +690,7 @@ const parties = [
         partyNumber: 50,
         players: [
             { player: 'Sasha', faction: 'Ixian', points: 0 },
-            { player: 'Volodymr', faction: 'Harkonnen', points: 0 },
+            { player: 'Volodymyr', faction: 'Harkonnen', points: 0 },
             { player: 'Mr Yuri', faction: 'Emperor', points: 2 },
             { player: 'Misha', faction: 'Richese', points: 0 },
             { player: 'Igor', faction: 'Tleilaxu', points: 2 },
@@ -705,7 +705,7 @@ const parties = [
         partyNumber: 51,
         players: [
             { player: 'Sasha', faction: 'Ecaz', points: 0 },
-            { player: 'Volodymr', faction: 'Bene', points: 0 },
+            { player: 'Volodymyr', faction: 'Bene', points: 0 },
             { player: 'Mr Yuri', faction: 'Tleilaxu', points: 0 },
             { player: 'Misha', faction: 'Choam', points: 0 },
             { player: 'Igor', faction: 'Atreides', points: 0 },
