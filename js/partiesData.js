@@ -715,6 +715,21 @@ const parties = [
         description: 'Solo victory in round 2.',
     },
 
+    {
+        date: '2024-11-06',
+        partyNumber: 52,
+        players: [
+            { player: 'Yura', faction: 'Harkonnen', points: 0 },
+            { player: 'R_ember', faction: 'Ecaz', points: 0 },
+            { player: 'Mr Yuri', faction: 'Bene', points: 2 },
+            { player: 'Artem S.', faction: 'Ixian', points: 0 },
+            { player: 'Oleg Old', faction: 'Guild', points: 2 },
+            { player: 'Max', faction: 'Fremen', points: 0 }
+        ],
+        winners: ['Oleg Old', 'Mr Yuri'],
+        description: 'Solo victory in round 6.',
+    },
+
 ];
 
 
