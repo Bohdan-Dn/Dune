@@ -727,7 +727,22 @@ const parties = [
             { player: 'Max', faction: 'Fremen', points: 0 }
         ],
         winners: ['Oleg Old', 'Mr Yuri'],
-        description: 'Solo victory in round 6.',
+        description: 'Victory of the alliance in round 6.',
+    },
+
+    {
+        date: '2024-11-13',
+        partyNumber: 53,
+        players: [
+            { player: 'Yura', faction: 'Bene', points: 2 },
+            { player: 'R_ember', faction: 'Guild', points: 0 },
+            { player: 'Igor', faction: 'Fremen', points: 2 },
+            { player: 'Artem S.', faction: 'Harkonnen', points: 0 },
+            { player: 'Oleg Old', faction: 'Emperor', points: 0 },
+            { player: 'Max', faction: 'Moritani', points: 0 }
+        ],
+        winners: ['Yura', 'Igor'],
+        description: 'Victory of the alliance in round 6.',
     },
 
 ];
