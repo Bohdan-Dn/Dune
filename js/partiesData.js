@@ -745,6 +745,21 @@ const parties = [
         description: 'Victory of the alliance in round 6.',
     },
 
+    {
+        date: '2024-12-04',
+        partyNumber: 54,
+        players: [
+            { player: 'Yura', faction: 'Fremen', points: 2 },
+            { player: 'Mr Yuri', faction: 'Harkonnen', points: 0 },
+            { player: 'Denis Junior', faction: 'Guild', points: 2 },
+            { player: 'Artem S.', faction: 'Moritani', points: 0 },
+            { player: 'Oleg Old', faction: 'Ixian', points: 0 },
+            { player: 'Max', faction: 'Choam', points: 0 }
+        ],
+        winners: ['Denis Junior', 'Yura'],
+        description: 'Victory of the alliance in round 3.',
+    },
+
 ];
 
 
