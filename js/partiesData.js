@@ -760,6 +760,36 @@ const parties = [
         description: 'Victory of the alliance in round 3.',
     },
 
+    {
+        date: '2024-12-07',
+        partyNumber: 55,
+        players: [
+            { player: 'Yura', faction: 'Tleilaxu', points: 0 },
+            { player: 'Mr Yuri', faction: 'Ixian', points: 2 },
+            { player: 'Denis Junior', faction: 'Choam', points: 0 },
+            { player: 'Volodymyr', faction: 'Moritani', points: 0 },
+            { player: 'Oleg Old', faction: 'Bene', points: 2 },
+            { player: 'IgorN', faction: 'Fremen', points: 0 }
+        ],
+        winners: ['Oleg Old', 'Mr Yuri'],
+        description: 'Victory of the alliance in round 2.',
+    },
+
+    {
+        date: '2024-12-07',
+        partyNumber: 56,
+        players: [
+            { player: 'Yura', faction: 'Guild', points: 2 },
+            { player: 'Mr Yuri', faction: 'Moritani', points: 2 },
+            { player: 'Denis Junior', faction: 'Atreides', points: 0 },
+            { player: 'Volodymyr', faction: 'Harkonnen', points: 0 },
+            { player: 'Max', faction: 'Emperor', points: 0 },
+            { player: 'IgorN', faction: 'Ecaz', points: 0 }
+        ],
+        winners: ['Yura', 'Mr Yuri'],
+        description: 'Victory of the alliance in round 10.',
+    },
+
 ];
 
 
