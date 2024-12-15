@@ -805,6 +805,21 @@ const parties = [
         description: 'Victory of the alliance in round 5.',
     },
 
+    {
+        date: '2024-12-14',
+        partyNumber: 58,
+        players: [
+            { player: 'Igor', faction: 'Guild', points: 1 },
+            { player: 'Mr Yuri', faction: 'Harkonnen', points: 0 },
+            { player: 'Oleg Old', faction: 'Fremen', points: 0 },
+            { player: 'Max', faction: 'Ixian', points: 0 },
+            { player: 'Volodymyr', faction: 'Choam', points: 0 },
+            { player: 'Denis Junior', faction: 'Bene', points: 0 }
+        ],
+        winners: ['Igor'],
+        description: 'Victory by Guild ability.',
+    },
+
 ];
 
 
