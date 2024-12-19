@@ -825,7 +825,7 @@ const parties = [
         partyNumber: 59,
         players: [
             { player: 'Igor', faction: 'Ixian', points: 0 },
-            { player: 'Mr Yuri', faction: 'Bene', points: 3 },
+            { player: 'Mr Yuri', faction: 'Bene', points: 2 },
             { player: 'Artem S.', faction: 'Atreides', points: 0 },
             { player: 'Artem', faction: 'Choam', points: 0 },
             { player: 'Max', faction: 'Moritani', points: 0 },
