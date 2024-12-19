@@ -820,6 +820,21 @@ const parties = [
         description: 'Victory by Guild ability.',
     },
 
+    {
+        date: '2024-12-14',
+        partyNumber: 59,
+        players: [
+            { player: 'Igor', faction: 'Ixian', points: 0 },
+            { player: 'Mr Yuri', faction: 'Bene', points: 3 },
+            { player: 'Artem S.', faction: 'Atreides', points: 0 },
+            { player: 'Artem', faction: 'Choam', points: 0 },
+            { player: 'Max', faction: 'Moritani', points: 0 },
+            { player: 'Yura', faction: 'Emperor', points: 0 }
+        ],
+        winners: ['Mr Yuri'],
+        description: 'Victory by Bene ability in raund 4.',
+    },
+
 ];
 
 
