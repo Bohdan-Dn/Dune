@@ -821,7 +821,7 @@ const parties = [
     },
 
     {
-        date: '2024-12-14',
+        date: '2024-12-18',
         partyNumber: 59,
         players: [
             { player: 'Igor', faction: 'Ixian', points: 0 },
@@ -833,6 +833,21 @@ const parties = [
         ],
         winners: ['Mr Yuri'],
         description: 'Victory by Bene ability in raund 4.',
+    },
+
+    {
+        date: '2024-12-28',
+        partyNumber: 60,
+        players: [
+            { player: 'Volodymyr', faction: 'Fremen', points: 0.5 },
+            { player: 'Mr Yuri', faction: 'Moritani', points: 0 },
+            { player: 'Artem S.', faction: 'Tleilaxu', points: 0 },
+            { player: 'Sasha', faction: 'Emperor', points: 0.5 },
+            { player: 'Max', faction: 'Atreides', points: 0 },
+            { player: 'Yura', faction: 'Bene', points: 0 }
+        ],
+        winners: ['Volodymyr', 'Sasha'],
+        description: 'Victory by Fremen ability in raund 10.',
     },
 
 ];
