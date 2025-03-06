@@ -290,6 +290,14 @@ function getSeason(seasonsList) {
                     DOM.ratingSubtitle.innerHTML = 'September 01, 2024 to december 31, 2024';
                     DOM.toggleFilterTitle.innerHTML = 'third season';
 
+                    addWinnersSection(ThirdSeasonWinnersNames);
+                    break;
+                case '4th season':
+                    currentParties = fourthSeasonParties;
+                    DOM.ratingTitle.innerHTML = 'The 4th season rating';
+                    DOM.ratingSubtitle.innerHTML = 'March 01, 2025 to may 31, 2025';
+                    DOM.toggleFilterTitle.innerHTML = '4th season';
+
                     const existingWinnersSection = document.querySelector('.rating__winners');
                     if (existingWinnersSection) {
                         existingWinnersSection.remove();
@@ -311,7 +319,7 @@ function getSeason(seasonsList) {
         });
     });
 };
-addPlayerRowsRanting(thirdSeasonParties);
+addPlayerRowsRanting(fourthSeasonParties);
 getSeason(DOM.headerFilterSeason);
 
 // ADD WINNERS SECTION
@@ -346,6 +354,7 @@ function addWinnersSection(winnersNames) {
 
 const FirstSeasonWinnersNames = ['Bohdan', 'Ivan', 'Igor'];
 const SecondSeasonWinnersNames = ['Nazar', 'Mr Yuri', 'Misha'];
+const ThirdSeasonWinnersNames = ['Mr Yuri', 'Oleg Old', 'Denis Junior'];
 //addWinnersSection(FirstSeasonWinnersNames);
 
 

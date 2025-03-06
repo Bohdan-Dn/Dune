@@ -850,6 +850,39 @@ const parties = [
         description: 'Victory by Fremen ability in raund 10.',
     },
 
+    {
+        date: '2025-03-05',
+        partyNumber: 61,
+        players: [
+            { player: 'Denis Junior', faction: 'Guild', points: 0 },
+            { player: 'Mr Yuri', faction: 'Ixian', points: 2 },
+            { player: 'Artem S.', faction: 'Tleilaxu', points: 0 },
+            { player: 'Artur', faction: 'Bene', points: 0 },
+            { player: 'Max', faction: 'Moritani', points: 2 },
+            { player: 'Yura', faction: 'Fremen', points: 0 }
+        ],
+        winners: ['Mr Yuri', 'Max'],
+        description: 'Victory of the alliance in round 3.',
+    },
+
+    {
+        date: '2025-03-05',
+        partyNumber: 62,
+        players: [
+            { player: 'Denis Junior', faction: 'Tleilaxu', points: 0 },
+            { player: 'Mr Yuri', faction: 'Guild', points: 1 },
+            { player: 'Artem S.', faction: 'Moritani', points: 0 },
+            { player: 'Artur', faction: 'Richese', points: 0 },
+            { player: 'Max', faction: 'Fremen', points: 0 },
+            { player: 'Yura', faction: 'Ixian', points: 0 }
+        ],
+        winners: ['Mr Yuri'],
+        description: 'Victory by Guild ability.',
+    },
+
+
+
+
 ];
 
 
@@ -863,6 +896,7 @@ const seasons = [
     { start: '2023-05-01', end: '2023-08-31' },
     { start: '2024-01-01', end: '2024-04-30' },
     { start: '2024-09-01', end: '2024-12-31' },
+    { start: '2025-03-01', end: '2025-05-31' },
 ];
 
 function filteredSeasonParties(parties, seasonIndex) {
@@ -881,3 +915,4 @@ const allParties = parties;
 const firstSeasonParties = filteredSeasonParties(parties, 0);
 const secondSeasonParties = filteredSeasonParties(parties, 1);
 const thirdSeasonParties = filteredSeasonParties(parties, 2);
+const fourthSeasonParties = filteredSeasonParties(parties, 3);

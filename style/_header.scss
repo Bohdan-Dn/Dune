@@ -26,7 +26,7 @@
         display: flex;
         align-items: center;
         height: rem(50);
-        @include adaptiveValue('gap', 60, 10);
+        @include adaptiveValue("gap", 60, 10);
         font-size: rem(24);
     }
 
@@ -50,7 +50,7 @@
         display: flex;
         align-items: center;
         gap: rem(7);
-        transition: color .3s linear;
+        transition: color 0.3s linear;
     }
 
     &__wrapper:hover {
@@ -77,11 +77,11 @@
         backdrop-filter: blur(5px);
         border-radius: rem(10);
         overflow: hidden;
-        transition: height .3s ease;
+        transition: height 0.3s ease;
     }
 
     &__list.open {
-        height: rem(130);
+        height: rem(160);
     }
 
     &__item:first-child {
@@ -93,7 +93,7 @@
     }
 
     &__item {
-        transition: color .3s linear;
+        transition: color 0.3s linear;
         font-size: rem(22);
     }
 
@@ -114,13 +114,12 @@
         backdrop-filter: blur(5px);
         border-radius: rem(10);
         overflow: hidden;
-        transition: max-height .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: max-height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
     &__dropdown-menu.open {
         max-height: rem(500);
     }
-
 
     &__dropdown-menu li {
         display: flex;
@@ -145,7 +144,7 @@
 }
 
 // RESPONSIVE DESING
-@media(max-width: $tablet) {
+@media (max-width: $tablet) {
     .header {
         font-size: rem(20);
 
@@ -161,12 +160,10 @@
     .filter {
         font-size: rem(22);
     }
-
 }
 
-@media(max-width: $mobile) {
+@media (max-width: $mobile) {
     .header {
-
         &__links {
             display: none;
         }
@@ -201,7 +198,7 @@
     }
 }
 
-@media(max-width: $mobileSmall) {
+@media (max-width: $mobileSmall) {
     .header {
         &__dropdown-menu {
             width: 90%;

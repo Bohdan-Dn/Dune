@@ -5,7 +5,7 @@
 .home {
     position: relative;
     height: 100vh;
-    background-image: url('https://w.wallha.com/ws/13/BH29KNVj.jpg');
+    background-image: url("https://i0.wp.com/gusandco.net/wp-content/uploads/2024/02/Dune-jeux-de-plateau.jpeg?resize=1140%2C639&ssl=1");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -17,7 +17,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        @include adaptiveValue('gap', 50, 10);
+        @include adaptiveValue("gap", 50, 10);
     }
 
     &__container img {
@@ -48,7 +48,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        @include adaptiveValue('gap', 20, 10);
+        @include adaptiveValue("gap", 20, 10);
     }
 
     &__dropdown {
@@ -88,27 +88,26 @@
 }
 
 .winners {
-
     &__title {
         text-align: center;
-        @include adaptiveValue('font-size', 38, 20);
-        @include adaptiveValue('margin-bottom', 20, 10);
+        @include adaptiveValue("font-size", 38, 20);
+        @include adaptiveValue("margin-bottom", 20, 10);
     }
 
     &__list {
         display: flex;
-        @include adaptiveValue('gap', 40, 10);
+        @include adaptiveValue("gap", 40, 10);
     }
 
     &__item {
         display: flex;
         align-items: center;
         gap: rem(7);
-        @include adaptiveValue('font-size', 32, 16);
+        @include adaptiveValue("font-size", 32, 16);
     }
 
     &__item img {
-        @include adaptiveValue('height', 50, 20);
+        @include adaptiveValue("height", 50, 20);
     }
 }
 
@@ -116,7 +115,7 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(0deg, rgba(148, 11, 12, 1), rgba(230, 136, 28, 1));
-    background-image: url('https://wallpaperaccess.com/full/6998602.jpg');
+    background-image: url("https://wallpaperaccess.com/full/6998602.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -213,7 +212,7 @@
         width: 40px;
         background: #e59c0a;
         border-radius: 50%;
-        transition: background .2s linear;
+        transition: background 0.2s linear;
     }
 
     &__button:hover {
@@ -256,7 +255,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        @include adaptiveValue('gap', 20, 10);
+        @include adaptiveValue("gap", 20, 10);
     }
 
     &__faction {
@@ -269,8 +268,8 @@
         width: rem(30);
         height: rem(30);
         border-radius: 50%;
-        @include adaptiveValue('margin-right', 20, 0);
-        @include adaptiveValue('margin-left', 35, 0);
+        @include adaptiveValue("margin-right", 20, 0);
+        @include adaptiveValue("margin-left", 35, 0);
     }
 
     &__faction strong {
@@ -281,7 +280,7 @@
 }
 
 .rules {
-    background-image: url('https://www.jestatharogue.com/wp-content/uploads/2023/01/Dune-Game-Board.jpg?x36035');
+    background-image: url("https://www.jestatharogue.com/wp-content/uploads/2023/01/Dune-Game-Board.jpg?x36035");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -307,7 +306,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        @include adaptiveValue('gap', 50, 20)
+        @include adaptiveValue("gap", 50, 20);
     }
 
     &__block {
@@ -425,15 +424,12 @@
 }
 
 #overlay.active {
-    background-color: rgba(148, 11, 12, .7);
+    background-color: rgba(148, 11, 12, 0.7);
     pointer-events: all;
 }
 
-
-
 // RESPONSIVE DESING
-@media(max-width: $tablet) {
-
+@media (max-width: $tablet) {
     .rating__subtitle {
         font-size: rem(20);
     }
@@ -444,8 +440,7 @@
     }
 }
 
-@media(max-width: $mobile) {
-
+@media (max-width: $mobile) {
     .rating__subtitle {
         font-size: rem(12);
     }
@@ -482,7 +477,7 @@
     }
 }
 
-@media(max-width: $mobileSmall) {
+@media (max-width: $mobileSmall) {
     .home {
         &__title {
             font-size: rem(12);

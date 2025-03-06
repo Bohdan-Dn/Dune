@@ -375,7 +375,7 @@ h6 {
   transition: height 0.3s ease;
 }
 .filter__list.open {
-  height: 8.125rem;
+  height: 10rem;
 }
 .filter__item:first-child {
   margin-top: 0.9375rem;
@@ -479,7 +479,7 @@ h6 {
 .home {
   position: relative;
   height: 100vh;
-  background-image: url("https://w.wallha.com/ws/13/BH29KNVj.jpg");
+  background-image: url("https://i0.wp.com/gusandco.net/wp-content/uploads/2024/02/Dune-jeux-de-plateau.jpeg?resize=1140%2C639&ssl=1");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
