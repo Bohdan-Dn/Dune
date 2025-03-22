@@ -880,6 +880,36 @@ const parties = [
         description: 'Victory by Guild ability.',
     },
 
+    {
+        date: '2025-03-08',
+        partyNumber: 63,
+        players: [
+            { player: 'Oleg Old', faction: 'Fremen', points: 2 },
+            { player: 'Mr Yuri', faction: 'Emperor', points: 2 },
+            { player: 'Artem S.', faction: 'Ixian', points: 0 },
+            { player: 'Volodymyr', faction: 'Ecaz', points: 0 },
+            { player: 'Max', faction: 'Harkonnen', points: 0 },
+            { player: 'Yura', faction: 'Moritani', points: 0 }
+        ],
+        winners: ['Mr Yuri', 'Oleg Old'],
+        description: 'Victory of the alliance in round 5.',
+    },
+
+    {
+        date: '2025-03-19',
+        partyNumber: 64,
+        players: [
+            { player: 'Denis Junior', faction: 'Fremen', points: 0 },
+            { player: 'Mr Yuri', faction: 'Harkonnen', points: 2 },
+            { player: 'Artem S.', faction: 'Ixian', points: 2 },
+            { player: 'Artur', faction: 'Guild', points: 0 },
+            { player: 'Max', faction: 'Tleilaxu', points: 0 },
+            { player: 'Yura', faction: 'Bene', points: 0 }
+        ],
+        winners: ['Mr Yuri', 'Artem S.'],
+        description: 'Victory of the alliance in round 6.',
+    },
+
 
 
 
