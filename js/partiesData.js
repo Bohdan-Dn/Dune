@@ -955,6 +955,35 @@ const parties = [
         description: 'Victory of the alliance in round 9.',
     },
 
+    {
+        date: '2025-04-21',
+        partyNumber: 68,
+        players: [
+            { player: 'Artur', faction: 'Atreides', points: 0 },
+            { player: 'Mr Yuri', faction: 'Bene', points: 2 },
+            { player: 'Oleg Old', faction: 'Ixian', points: 2 },
+            { player: 'Igor', faction: 'Choam', points: 0 },
+            { player: 'Artem S.', faction: 'Harkonnen', points: 0 },
+            { player: 'Yura', faction: 'Emperor', points: 0 }
+        ],
+        winners: ['Mr Yuri', 'Oleg Old'],
+        description: 'Victory of the alliance in round 6.',
+    },
+
+    {
+        date: '2025-04-23',
+        partyNumber: 69,
+        players: [
+            { player: 'Artur', faction: 'Emperor', points: 0 },
+            { player: 'Mr Yuri', faction: 'Moritani', points: 0 },
+            { player: 'Max', faction: 'Guild', points: 0 },
+            { player: 'Contra', faction: 'Harkonnen', points: 0 },
+            { player: 'Artem S.', faction: 'Fremen', points: 0 },
+            { player: 'Yura', faction: 'Ixian', points: 3 }
+        ],
+        winners: ['Yura'],
+        description: 'Solo victory in round 9.',
+    },
 
 
 
