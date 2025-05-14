@@ -987,6 +987,42 @@ const parties = [
 
 
 
+
+
+
+    {
+        date: '2025-05-10',
+        partyNumber: 70,
+        players: [
+            { player: 'Sasha', faction: 'Ixian', points: 0 },
+            { player: 'Mr Yuri', faction: 'Guild', points: 2 },
+            { player: 'Max', faction: 'Moritani', points: 2 },
+            { player: 'Igor', faction: 'Harkonnen', points: 0 },
+            { player: 'Artem S.', faction: 'Richese', points: 0 },
+            { player: 'Yura', faction: 'Tleilaxu', points: 0 }
+        ],
+        winners: ['Mr Yuri', 'Max'],
+        description: 'Victory of the alliance in round 3.',
+    },
+
+    {
+        date: '2025-05-10',
+        partyNumber: 71,
+        players: [
+            { player: 'Sasha', faction: 'Tleilaxu', points: 2 },
+            { player: 'Mr Yuri', faction: 'Harkonnen', points: 2 },
+            { player: 'Max', faction: 'Ixian', points: 0 },
+            { player: 'Igor', faction: 'Fremen', points: 0 },
+            { player: 'Artem S.', faction: 'Emperor', points: 0 },
+            { player: 'Yura', faction: 'Atreides', points: 0 }
+        ],
+        winners: ['Mr Yuri', 'Sasha'],
+        description: 'Victory of the alliance in round 5.',
+    },
+
+
+
+
 ];
 
 
