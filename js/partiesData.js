@@ -985,11 +985,6 @@ const parties = [
         description: 'Solo victory in round 9.',
     },
 
-
-
-
-
-
     {
         date: '2025-05-10',
         partyNumber: 70,
@@ -1018,6 +1013,51 @@ const parties = [
         ],
         winners: ['Mr Yuri', 'Sasha'],
         description: 'Victory of the alliance in round 5.',
+    },
+
+    {
+        date: '2025-05-14',
+        partyNumber: 72,
+        players: [
+            { player: 'Max', faction: 'Atreides', points: 0 },
+            { player: 'Mr Yuri', faction: 'Ixian', points: 2 },
+            { player: 'Max', faction: 'Atreides', points: 2 },
+            { player: 'Igor', faction: 'Guild', points: 0 },
+            { player: 'Artem S.', faction: 'Tleilaxu', points: 0 },
+            { player: 'Yura', faction: 'Moritani', points: 0 }
+        ],
+        winners: ['Mr Yuri', 'Max'],
+        description: 'Victory of the alliance in round 2.',
+    },
+
+    {
+        date: '2025-05-17',
+        partyNumber: 73,
+        players: [
+            { player: 'Artur', faction: 'Choam', points: 0 },
+            { player: 'Mr Yuri', faction: 'Atreides', points: 2 },
+            { player: 'Max', faction: 'Richese', points: 0 },
+            { player: 'Igor', faction: 'Bene', points: 0 },
+            { player: 'Volodymyr', faction: 'Emperor', points: 0 },
+            { player: 'Yura', faction: 'Harkonnen', points: 2 }
+        ],
+        winners: ['Mr Yuri', 'Yura'],
+        description: 'Victory of the alliance in round 3.',
+    },
+
+    {
+        date: '2025-05-17',
+        partyNumber: 74,
+        players: [
+            { player: 'Artur', faction: 'Ecaz', points: 0 },
+            { player: 'Mr Yuri', faction: 'Bene', points: 2 },
+            { player: 'Max', faction: 'Harkonnen', points: 2 },
+            { player: 'Igor', faction: 'Fremen', points: 0 },
+            { player: 'Volodymyr', faction: 'Choam', points: 0 },
+            { player: 'Yura', faction: 'Ixian', points: 0 }
+        ],
+        winners: ['Mr Yuri', 'Max'],
+        description: 'Victory of the alliance in round 8.',
     },
 
 
