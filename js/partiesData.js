@@ -1063,6 +1063,44 @@ const parties = [
 
 
 
+
+
+
+
+    {
+        date: '2025-05-21',
+        partyNumber: 75,
+        players: [
+            { player: 'Artur', faction: 'Ixian', points: 2 },
+            { player: 'Mr Yuri', faction: 'Guild', points: 2 },
+            { player: 'Max', faction: 'Moritani', points: 0 },
+            { player: 'Igor', faction: 'Tleilaxu', points: 0 },
+            { player: 'Artem S.', faction: 'Harkonnen', points: 0 },
+            { player: 'Yura', faction: 'Bene', points: 0 }
+        ],
+        winners: ['Mr Yuri', 'Artur'],
+        description: 'Victory of the alliance in round 3.',
+    },
+
+    {
+        date: '2025-05-22',
+        partyNumber: 76,
+        players: [
+            { player: 'Artur', faction: 'Richese', points: 0 },
+            { player: 'Mr Yuri', faction: 'Bene', points: 2 },
+            { player: 'Max', faction: 'Tleilaxu', points: 0 },
+            { player: 'Igor', faction: 'Atreides', points: 2 },
+            { player: 'Artem S.', faction: 'Ixian', points: 0 },
+            { player: 'Yura', faction: 'Guild', points: 0 }
+        ],
+        winners: ['Mr Yuri', 'Igor'],
+        description: 'Victory of the alliance in round 3.',
+    },
+
+
+
+
+
 ];
 
 
