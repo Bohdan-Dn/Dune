@@ -1079,9 +1079,9 @@ const parties = [
 
     {
         date: '2025-09-01',
-        partyNumber: 77,
+        partyNumber: 76,
         players: [
-            { player: 'Oleg Old', faction: 'Harkonnen', points: 0 },
+            { player: 'Oleg', faction: 'Harkonnen', points: 0 },
             { player: 'Mr Yuri', faction: 'Atreides', points: 2 },
             { player: 'Max', faction: 'Guild', points: 0 },
             { player: 'Oleg', faction: 'Fremen', points: 2 },
@@ -1094,12 +1094,12 @@ const parties = [
 
     {
         date: '2025-09-10',
-        partyNumber: 78,
+        partyNumber: 77,
         players: [
             { player: 'Igor', faction: 'Atreides', points: 0 },
             { player: 'Mr Yuri', faction: 'Emperor', points: 0 },
             { player: 'Max', faction: 'Fremen', points: 0 },
-            { player: 'Oleg', faction: 'Guild', points: 2 },
+            { player: 'Oleg Old', faction: 'Guild', points: 2 },
             { player: 'R_ember', faction: 'Harkonnen', points: 2 },
             { player: 'Yura', faction: 'Bene', points: 0 }
         ],
@@ -1109,7 +1109,7 @@ const parties = [
 
     {
         date: '2025-09-17',
-        partyNumber: 79,
+        partyNumber: 78,
         players: [
             { player: 'Denis Junior', faction: 'Bene', points: 0 },
             { player: 'Mr Yuri', faction: 'Atreides', points: 0 },
@@ -1124,9 +1124,9 @@ const parties = [
 
     {
         date: '2025-09-24',
-        partyNumber: 80,
+        partyNumber: 79,
         players: [
-            { player: 'Oleg', faction: 'Guild', points: 0 },
+            { player: 'Oleg Old', faction: 'Guild', points: 0 },
             { player: 'Mr Yuri', faction: 'Bene', points: 0 },
             { player: 'R_ember', faction: 'Fremen', points: 0 },
             { player: 'Igor', faction: 'Emperor', points: 2 },
@@ -1139,12 +1139,12 @@ const parties = [
 
     {
         date: '2025-09-27',
-        partyNumber: 81,
+        partyNumber: 80,
         players: [
             { player: 'Denis Junior', faction: 'Harkonnen', points: 0 },
             { player: 'Mr Yuri', faction: 'Atreides', points: 0 },
             { player: 'R_ember', faction: 'Bene', points: 2 },
-            { player: 'Oleg', faction: 'Fremen', points: 0 },
+            { player: 'Oleg Old', faction: 'Fremen', points: 0 },
             { player: 'Volodymyr', faction: 'Guild', points: 0 },
             { player: 'Yura', faction: 'Emperor', points: 0 }
         ],
@@ -1154,7 +1154,7 @@ const parties = [
 
     {
         date: '2025-09-27',
-        partyNumber: 82,
+        partyNumber: 81,
         players: [
             { player: 'Denis Junior', faction: 'Atreides', points: 2 },
             { player: 'Mr Yuri', faction: 'Fremen', points: 2 },
