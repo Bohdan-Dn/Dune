@@ -1112,11 +1112,11 @@ const parties = [
         partyNumber: 79,
         players: [
             { player: 'Denis Junior', faction: 'Bene', points: 0 },
-            { player: 'Mr Yuri', faction: 'Atreides', points: 2 },
+            { player: 'Mr Yuri', faction: 'Atreides', points: 0 },
             { player: 'R_ember', faction: 'Emperor', points: 0 },
             { player: 'Igor', faction: 'Guild', points: 2 },
             { player: 'Volodymyr', faction: 'Fremen', points: 0 },
-            { player: 'Yura', faction: 'Harkonnen', points: 0 }
+            { player: 'Yura', faction: 'Harkonnen', points: 2 }
         ],
         winners: ['Yura', 'Igor'],
         description: 'Victory of the alliance in round 4.',
