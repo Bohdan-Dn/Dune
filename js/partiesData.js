@@ -1093,7 +1093,7 @@ const parties = [
     },
 
     {
-        date: '2025-09-05',
+        date: '2025-09-10',
         partyNumber: 78,
         players: [
             { player: 'Igor', faction: 'Atreides', points: 0 },
@@ -1108,7 +1108,7 @@ const parties = [
     },
 
     {
-        date: '2025-09-09',
+        date: '2025-09-17',
         partyNumber: 79,
         players: [
             { player: 'Denis Junior', faction: 'Bene', points: 0 },
@@ -1123,7 +1123,7 @@ const parties = [
     },
 
     {
-        date: '2025-09-15',
+        date: '2025-09-24',
         partyNumber: 80,
         players: [
             { player: 'Oleg', faction: 'Guild', points: 0 },
@@ -1138,7 +1138,7 @@ const parties = [
     },
 
     {
-        date: '2025-09-20',
+        date: '2025-09-27',
         partyNumber: 81,
         players: [
             { player: 'Denis Junior', faction: 'Harkonnen', points: 0 },
@@ -1153,7 +1153,7 @@ const parties = [
     },
 
     {
-        date: '2025-09-05',
+        date: '2025-09-27',
         partyNumber: 82,
         players: [
             { player: 'Denis Junior', faction: 'Atreides', points: 2 },
