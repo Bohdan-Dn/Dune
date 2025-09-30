@@ -298,6 +298,14 @@ function getSeason(seasonsList) {
                     DOM.ratingSubtitle.innerHTML = 'March 01, 2025 to may 31, 2025';
                     DOM.toggleFilterTitle.innerHTML = '4th season';
 
+                    addWinnersSection(FouthSeasonWinnersNames);
+                    break;
+                case '5th season':
+                    currentParties = fifthSeasonParties;
+                    DOM.ratingTitle.innerHTML = 'The 5th season rating';
+                    DOM.ratingSubtitle.innerHTML = 'September 01, 2025 to December 31, 2025';
+                    DOM.toggleFilterTitle.innerHTML = '5th season';
+
                     const existingWinnersSection = document.querySelector('.rating__winners');
                     if (existingWinnersSection) {
                         existingWinnersSection.remove();
@@ -319,7 +327,7 @@ function getSeason(seasonsList) {
         });
     });
 };
-addPlayerRowsRanting(fourthSeasonParties);
+addPlayerRowsRanting(fifthSeasonParties);
 getSeason(DOM.headerFilterSeason);
 
 // ADD WINNERS SECTION
@@ -355,6 +363,7 @@ function addWinnersSection(winnersNames) {
 const FirstSeasonWinnersNames = ['Bohdan', 'Ivan', 'Igor'];
 const SecondSeasonWinnersNames = ['Nazar', 'Mr Yuri', 'Misha'];
 const ThirdSeasonWinnersNames = ['Mr Yuri', 'Oleg Old', 'Denis Junior'];
+const FouthSeasonWinnersNames = ['Mr Yuri', 'Yura', 'Max'];
 //addWinnersSection(FirstSeasonWinnersNames);
 
 

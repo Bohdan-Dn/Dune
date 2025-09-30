@@ -258,7 +258,7 @@ h6 {
 }
 
 .tbody tr:nth-child(odd) {
-  background-color: #f2ba38;
+  background-color: rgb(242.4919354839, 185.6370967742, 56.0080645161);
 }
 
 @media (max-width: 61.99875em) {
@@ -375,7 +375,7 @@ h6 {
   transition: height 0.3s ease;
 }
 .filter__list.open {
-  height: 10rem;
+  height: 11.875rem;
 }
 .filter__item:first-child {
   margin-top: 0.9375rem;
@@ -548,7 +548,7 @@ h6 {
 }
 .rating__dropdown:hover {
   color: rgb(6, 69, 173);
-  color: #032863;
+  color: rgb(3.4357541899, 39.5111731844, 99.0642458101);
 }
 .rating__dropdown i::before {
   font-size: 1.5rem;
@@ -719,7 +719,7 @@ h6 {
   transition: background 0.2s linear;
 }
 .parties__button:hover {
-  background: #cd8b09;
+  background: rgb(204.5669456067, 139.3556485356, 8.9330543933);
 }
 .parties__button::before, .parties__button::after {
   font-size: 1.375rem;

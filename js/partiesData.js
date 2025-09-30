@@ -1060,13 +1060,6 @@ const parties = [
         description: 'Victory of the alliance in round 8.',
     },
 
-
-
-
-
-
-
-
     {
         date: '2025-05-21',
         partyNumber: 75,
@@ -1082,19 +1075,96 @@ const parties = [
         description: 'Victory of the alliance in round 3.',
     },
 
+
+
     {
-        date: '2025-05-22',
-        partyNumber: 76,
+        date: '2025-09-01',
+        partyNumber: 77,
         players: [
-            { player: 'Artur', faction: 'Richese', points: 0 },
-            { player: 'Mr Yuri', faction: 'Bene', points: 2 },
-            { player: 'Max', faction: 'Tleilaxu', points: 0 },
-            { player: 'Igor', faction: 'Atreides', points: 2 },
-            { player: 'Artem S.', faction: 'Ixian', points: 0 },
-            { player: 'Yura', faction: 'Guild', points: 0 }
+            { player: 'Oleg Old', faction: 'Harkonnen', points: 0 },
+            { player: 'Mr Yuri', faction: 'Atreides', points: 2 },
+            { player: 'Max', faction: 'Guild', points: 0 },
+            { player: 'Oleg', faction: 'Fremen', points: 2 },
+            { player: 'R_ember', faction: 'Emperor', points: 0 },
+            { player: 'Yura', faction: 'Bene', points: 0 }
+        ],
+        winners: ['Mr Yuri', 'Oleg'],
+        description: 'Victory of the alliance in round 6.',
+    },
+
+    {
+        date: '2025-09-05',
+        partyNumber: 78,
+        players: [
+            { player: 'Igor', faction: 'Atreides', points: 0 },
+            { player: 'Mr Yuri', faction: 'Emperor', points: 0 },
+            { player: 'Max', faction: 'Fremen', points: 0 },
+            { player: 'Oleg', faction: 'Guild', points: 2 },
+            { player: 'R_ember', faction: 'Harkonnen', points: 2 },
+            { player: 'Yura', faction: 'Bene', points: 0 }
+        ],
+        winners: ['R_ember', 'Oleg'],
+        description: 'Victory of the alliance in round 8.',
+    },
+
+    {
+        date: '2025-09-09',
+        partyNumber: 79,
+        players: [
+            { player: 'Denis Junior', faction: 'Bene', points: 0 },
+            { player: 'Mr Yuri', faction: 'Atreides', points: 2 },
+            { player: 'R_ember', faction: 'Emperor', points: 0 },
+            { player: 'Igor', faction: 'Guild', points: 2 },
+            { player: 'Volodymyr', faction: 'Fremen', points: 0 },
+            { player: 'Yura', faction: 'Harkonnen', points: 0 }
+        ],
+        winners: ['Yura', 'Igor'],
+        description: 'Victory of the alliance in round 4.',
+    },
+
+    {
+        date: '2025-09-15',
+        partyNumber: 80,
+        players: [
+            { player: 'Oleg', faction: 'Guild', points: 0 },
+            { player: 'Mr Yuri', faction: 'Bene', points: 0 },
+            { player: 'R_ember', faction: 'Fremen', points: 0 },
+            { player: 'Igor', faction: 'Emperor', points: 2 },
+            { player: 'Max', faction: 'Harkonnen', points: 0 },
+            { player: 'Yura', faction: 'Atreides', points: 2 }
+        ],
+        winners: ['Yura', 'Igor'],
+        description: 'Victory of the alliance in round 4.',
+    },
+
+    {
+        date: '2025-09-20',
+        partyNumber: 81,
+        players: [
+            { player: 'Denis Junior', faction: 'Harkonnen', points: 0 },
+            { player: 'Mr Yuri', faction: 'Atreides', points: 0 },
+            { player: 'R_ember', faction: 'Bene', points: 2 },
+            { player: 'Oleg', faction: 'Fremen', points: 0 },
+            { player: 'Volodymyr', faction: 'Guild', points: 0 },
+            { player: 'Yura', faction: 'Emperor', points: 0 }
+        ],
+        winners: ['R_ember'],
+        description: 'Victory by prediction in round 5.',
+    },
+
+    {
+        date: '2025-09-05',
+        partyNumber: 82,
+        players: [
+            { player: 'Denis Junior', faction: 'Atreides', points: 2 },
+            { player: 'Mr Yuri', faction: 'Fremen', points: 2 },
+            { player: 'R_ember', faction: 'Bene', points: 0 },
+            { player: 'Max', faction: 'Guild', points: 0 },
+            { player: 'Volodymyr', faction: 'Emperor', points: 0 },
+            { player: 'Yura', faction: 'Harkonnen', points: 0 }
         ],
         winners: ['Mr Yuri', 'Igor'],
-        description: 'Victory of the alliance in round 3.',
+        description: 'Victory of the alliance in round 5.',
     },
 
 
@@ -1115,6 +1185,7 @@ const seasons = [
     { start: '2024-01-01', end: '2024-04-30' },
     { start: '2024-09-01', end: '2024-12-31' },
     { start: '2025-03-01', end: '2025-05-31' },
+    { start: '2025-09-01', end: '2025-12-31' },
 ];
 
 function filteredSeasonParties(parties, seasonIndex) {
@@ -1134,3 +1205,4 @@ const firstSeasonParties = filteredSeasonParties(parties, 0);
 const secondSeasonParties = filteredSeasonParties(parties, 1);
 const thirdSeasonParties = filteredSeasonParties(parties, 2);
 const fourthSeasonParties = filteredSeasonParties(parties, 3);
+const fifthSeasonParties = filteredSeasonParties(parties, 4);
